@@ -20,7 +20,7 @@
     - Example :
         - Lambda is a serverless compute service where AWS handles the infrastructure, scaling, and availability, while you remain responsible for securing and managing your application code.
 
-![alt text](<Module 3: Unmanaged and managed services.png>)
+![alt text](<Images/Module 3: Unmanaged and managed services.png>)
 
 
 ---

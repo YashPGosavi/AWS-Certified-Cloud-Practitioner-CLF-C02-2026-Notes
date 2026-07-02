@@ -232,7 +232,7 @@ Security groups act as **virtual firewalls for EC2 instances**.
 
 - An unmanaged service like Amazon EC2 requires you to perform all of the necessary security configuration and management tasks. When you deploy an EC2 instance, you are responsible for configuring security, managing the guest operating system (OS), applying updates, and setting up firewalls (security groups). 
 
-![alt text](EC2_Shared_Responsibility_Model.png)
+![alt text](Images/EC2_Shared_Responsibility_Model.png)
 
 
 ---
@@ -257,8 +257,8 @@ Security groups act as **virtual firewalls for EC2 instances**.
 
 - AMIs provide repeatability through a consistent environment for every new instance. Because configurations are identical and deployments automated, development and testing environments are consistent. This helps when scaling, reduces errors, and streamlines managing large-scale environments
 
---
--
+---
+
 ### EC2 Instance Purchace Options
 
 1. On-Demand 

@@ -31,7 +31,7 @@
 
 #### AWS Network Diagram
 
-![alt text](Network_diagrams.png)
+![alt text](Images/Network_diagrams.png)
 
     1. AWS Cloud
         - Outermost layer in architecture diagrams.
@@ -74,7 +74,7 @@
     - Without limits, traffic could move freely between resources.
     - AWS helps you group resources, isolate them, and control who can access them.
 
-![alt text](Network_Gateways.png)
+![alt text](Images/Network_Gateways.png)
 
 
 1. **Internet gateway**
@@ -172,7 +172,7 @@
 
 ## Subnets, Security Groups, and Network Access Control Lists
 
-![alt text](Network_traffic_control.png)
+![alt text](Images/Network_traffic_control.png)
 
 1. **Subnets**
     - A subnet is a section of a VPC where you group resources based on security or operational needs.
@@ -214,7 +214,7 @@
 - Securing subnets and resources in a VPC with network ACLs and security groups is your responsibility.
 - These components are important defenses for protecting applications in the cloud.
 
-![alt text](Networking_Shared_responsibility_model.png)
+![alt text](Images/Networking_Shared_responsibility_model.png)
 
 ---
 
