@@ -85,7 +85,7 @@
     `AWS Cloud → Region → VPC → Availability Zone → Subnet → Resources`
 
 2. **Virtual private gateway**
-    - A virtual private gateway allows secure communication between a VPC and a private network.
+    - A virtual private gateway is the virtual private network (VPN) endpoint on the AWS side. It provides a way for you to establish a secure, encrypted connection between your on-premises network and your virtual private cloud (VPC).
     - It is used to create a VPN connection over the internet.
     - Traffic is encrypted and protected while travelling through public infrastructure.
     - It allows only approved networks to access the VPC.
@@ -124,7 +124,7 @@
 
 
 1. **AWS Client VPN**
-    - Used to securely connect remote workers and on-premises networks to AWS.
+    - Amazon Client VPN is a networking service you can use to connect your remote workers and on-premises networks to the cloud. It provides advanced authentication, and elastic and remote access in a fully managed service.
     - A fully managed and elastic VPN service.
     - Automatically scales up or down based on demand.
     - No need to manage hardware or estimate user capacity in advance.
@@ -175,7 +175,7 @@
 ![alt text](Images/Network_traffic_control.png)
 
 1. **Subnets**
-    - A subnet is a section of a VPC where you group resources based on security or operational needs.
+    - A subnet is a section of a VPC where you group resources based on security or operational needs, It is a network segment within a Virtual Private Cloud (VPC) .
     - **Public subnets** contain resources that must be accessible to the public, such as a website.
     - **Private subnets** contain resources that should be reachable only through a private network, such as databases with sensitive data.
     - You can define rules to allow communication between resources in different subnets.
@@ -186,6 +186,7 @@
     - Network ACLs evaluate packets at the subnet boundary.
 
 3. **Network ACLs (Network Access Control List)**
+    - Network ACLs would allow the broad traffic control at the subnet level. Network ACLs also have both allow and deny type rules.
     - A network ACL is a virtual firewall that controls inbound and outbound traffic at the subnet level.
     - Every AWS account has a default network ACL.
     - By default, the default network ACL allows all inbound and outbound traffic.
@@ -195,6 +196,7 @@
 
 4. **Security groups**
     - A security group is a virtual firewall that controls inbound and outbound traffic for specific resources, such as Amazon EC2 instances.
+    - Security groups would allow the fine-grained control at the instance level. They can define rules in the public subnet for the individual instances.
     - By default, a security group denies all inbound traffic and allows all outbound traffic.
     - You can add custom rules to allow only the traffic you want.
     - Security groups are stateful, so they remember previous decisions and allow return traffic automatically.
@@ -244,6 +246,7 @@
     - Routes end users to AWS resources such as Amazon EC2 instances and load balancers.
     - Can also route users to resources outside AWS.
     - Lets you register and manage domain names.
+    - Route 53 is a domain name system (DNS) service that manages domain registration, DNS routing, and health checks. It provides reliable and efficient routing of users to your website or applications, whether they are hosted within AWS or elsewhere.
 
 2. **Amazon CloudFront**
     - A content delivery network (CDN) that delivers content with low latency and high speeds.
