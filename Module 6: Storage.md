@@ -400,29 +400,29 @@
 
 ![alt text](Images/Amazon_S3_Lifecycle_configuration.png)
 
-1. **After 30 days**
-   - Move an object from S3 Standard to S3 Standard-IA.
+  1. **After 30 days**
+    - Move an object from S3 Standard to S3 Standard-IA.
 
-2. **After 60 more days**
-   - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
+  2. **After 60 more days**
+    - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
 
-3. **After 365 days**
-   - Expire the object and permanently delete it.
+  3. **After 365 days**
+    - Expire the object and permanently delete it.
 
 
 #### Benefits of S3 Lifecycle
 
-1. **Cost savings**
-   - Automatically moves older data to cheaper storage classes.
+  1. **Cost savings**
+    - Automatically moves older data to cheaper storage classes.
 
-2. **Less manual work**
-   - Reduces the need to manage storage transitions manually.
+  2. **Less manual work**
+    - Reduces the need to manage storage transitions manually.
 
-3. **Better data retention management**
-   - Helps enforce deletion schedules for temporary or aging data.
+  3. **Better data retention management**
+    - Helps enforce deletion schedules for temporary or aging data.
 
-4. **Improved operational consistency**
-   - Ensures storage policies are applied consistently across buckets and objects.
+  4. **Improved operational consistency**
+    - Ensures storage policies are applied consistently across buckets and objects.
 
 
 ### Common exam reminders
@@ -436,4 +436,400 @@
 
 ---
 
+## Amazon Elastic File System (Amazon EFS) - Managed File System
 
+### Quick comparison: EBS vs EFS
+
+- **Amazon EBS**
+  - Block storage for EC2 instances
+  - Typically attached to one instance at a time at the CCP level
+  - Tied to a specific Availability Zone
+  - Does not automatically scale storage
+
+- **Amazon EFS**
+  - Shared file storage for multiple compute resources
+  - Multiple instances can read and write to the same data at the same time
+  - Uses the Linux NFS protocol
+  - Automatically scales as files are added and removed
+
+
+### What is Amazon EFS?
+
+- Amazon EFS is a fully managed, serverless, elastic file storage service for AWS cloud services and on-premises resources.
+- It supports the **NFSv4** protocol, so Linux-based applications can mount it like a shared network file system.
+- It automatically scales to petabytes without disrupting applications.
+- It is designed for workloads that need shared access from multiple compute resources such as EC2 instances, containers, or serverless applications.
+- Amazon EFS is **not supported on Windows-based EC2 instances**.
+
+- **Key takeaway**: use Amazon EFS when multiple resources need shared, elastic file storage.
+
+
+#### Amazon EFS benefits
+
+  1. **Shared access**
+    - Multiple instances can mount and use the same file system at the same time.
+    - This makes EFS a strong fit for shared content, web farms, home directories, and distributed applications.
+
+  2. **Elastic storage**
+    - Amazon EFS grows and shrinks automatically as files are added or removed.
+    - You do not need to provision storage capacity in advance.
+    - You pay only for the storage you use.
+
+  3. **High availability and durability**
+    - **Regional** EFS file systems store data redundantly across multiple Availability Zones in the same Region.
+    - This helps keep data available even if one Availability Zone becomes unavailable.
+
+  4. **Managed service**
+    - AWS manages the underlying file storage infrastructure for you.
+    - You do not need to deploy, patch, or maintain file servers.
+
+
+### Amazon EFS file system types and storage classes
+
+- Amazon EFS has both **file system types** and **storage classes**.
+- This distinction matters:
+  - **File system types** define availability and resiliency.
+  - **Storage classes** define access pattern, performance, and cost.
+
+
+#### EFS file system types
+
+  1. **Regional**
+    - Recommended option for most workloads.
+    - Stores data redundantly across multiple Availability Zones in the same Region.
+    - Best for data that needs the highest availability and resilience.
+
+  2. **One Zone**
+    - Stores data in a single Availability Zone.
+    - Lower cost than Regional EFS, but less resilient.
+    - Best for workloads that can tolerate reduced availability or where data can be recreated.
+
+
+#### EFS storage classes
+
+  1. **EFS Standard**
+    - For active data that needs the lowest latency.
+    - New data is written here first.
+
+  2. **EFS Infrequent Access (IA)**
+    - Cost-optimized for data accessed only a few times each quarter.
+    - Good for less frequently used files.
+
+  3. **EFS Archive**
+    - Lowest-cost EFS storage class for data accessed only a few times each year or less.
+    - Best for cold file data that does not need the lowest latency.
+
+
+### Amazon EFS data lifecycle
+
+- Amazon EFS lifecycle policies can automatically move data between storage classes based on usage patterns.
+- Lifecycle policies apply to the **entire file system**.
+- This helps reduce storage costs without manual intervention.
+
+1. **Transition to IA**
+   - Moves files from Standard to EFS IA after they have not been accessed in the Standard storage class for a set period.
+   - By default, files transition to IA after **30 days**.
+
+2. **Transition to Archive**
+   - Moves files from Standard or IA into EFS Archive for colder data.
+   - By default, files transition to Archive after **90 days** without access in the Standard storage class.
+
+3. **Transition to Standard**
+   - Can move files from IA or Archive back to Standard when they are accessed.
+   - By default, this setting is **disabled**, so accessed files remain in IA or Archive unless you enable return to Standard on first access.
+
+### Common exam reminders
+
+- Amazon EFS is **file storage**, Amazon EBS is **block storage**, and Amazon S3 is **object storage**.
+- Amazon EFS uses the **NFS** protocol and is mainly for **Linux-based** workloads.
+- Multiple resources can access the same EFS file system at the same time.
+- **Regional** EFS spans multiple Availability Zones; **One Zone** does not.
+- EFS can automatically move older data to **IA** or **Archive** using lifecycle policies.
+- EFS automatically scales, while EBS capacity is provisioned manually.
+
+
+---
+
+
+## Amazon FSx
+
+- Amazon FSx is a **fully managed** service for launching and running popular file systems on AWS.
+- It is designed for workloads that need **feature-rich** and **high-performance** file storage.
+- AWS handles hardware provisioning, patching, monitoring, and backups.
+- Amazon FSx offers four file system families:
+  1. **FSx for Windows File Server**
+  2. **FSx for NetApp ONTAP**
+  3. **FSx for OpenZFS**
+  4. **FSx for Lustre**
+
+- **Key takeaway**: use Amazon FSx when your workload needs a specific file system, protocol, or enterprise feature set that Amazon EFS does not provide.
+
+
+### Amazon EFS vs Amazon FSx
+
+- **Amazon EFS**
+  - AWS-native shared file storage
+  - Uses NFS
+  - Best for simple, elastic Linux file sharing
+
+- **Amazon FSx**
+  - Managed file systems based on specific technologies
+  - Supports multiple protocols and specialized feature sets
+  - Best when you need Windows, Lustre, OpenZFS, or NetApp ONTAP capabilities
+
+
+### Benefits of Amazon FSx
+
+  1. **File system compatibility**
+    - Amazon FSx supports widely used file systems and protocols, making it easier to migrate existing applications without major changes.
+
+  2. **Managed infrastructure**
+    - AWS manages deployment, patching, hardware replacement, and backups.
+
+  3. **High performance**
+    - Amazon FSx is designed for demanding workloads that need low latency, high throughput, or specialized file system features.
+
+  4. **Data protection and availability**
+    - Depending on the FSx family, you can use features such as Multi-AZ deployments, backups, snapshots, replication, and encryption.
+
+
+### Amazon FSx file system families
+
+1. **Amazon FSx for Windows File Server**
+   - Fully managed shared storage built on Windows Server.
+   - Uses the **SMB(Server Message Block)** protocol and supports native Windows compatibility.
+   - Common use cases:
+     - Migrate Windows file servers to AWS
+     - Accelerate hybrid workloads
+     - Reduce SQL Server deployment cost
+     - Support virtual desktops and application streaming
+
+2. **Amazon FSx for NetApp ONTAP**
+   - Fully managed shared storage built on NetApp ONTAP.
+   - Good for customers who want familiar ONTAP features such as snapshots, cloning, replication, and automatic tiering.
+   - Supports multi-protocol access for many enterprise workloads.
+   - Common use cases:
+     - Migrate workloads to AWS
+     - Build modern applications
+     - Modernize data management
+     - Improve business continuity and disaster recovery
+
+3. **Amazon FSx for OpenZFS**
+   - Fully managed shared storage built on the OpenZFS file system.
+   - Accessible through the **NFS** protocol.
+   - Strong fit for **Linux-based** workloads that benefit from low latency, snapshots, and cloning.
+   - Common use cases:
+     - Migrate Linux workloads to AWS
+     - Speed up analytics workloads
+     - Accelerate content management
+     - Increase dev/test velocity
+
+4. **Amazon FSx for Lustre**
+   - Fully managed shared storage built on the Lustre high-performance file system.
+   - Best for workloads that need **very fast parallel file storage**.
+   - Integrates well with **Amazon S3** for data processing workflows.
+   - Common use cases:
+     - Accelerate machine learning workloads
+     - Support high performance computing
+     - Power big data analytics
+     - Improve media processing agility
+
+### Common exam reminders
+
+- Amazon FSx is a **Managed file storage** service.
+- Choose Amazon FSx when you need a **specific file system technology** rather than general-purpose shared NFS storage.
+- For **Windows file shares**, use **FSx for Windows File Server with SMB**.
+- For **HPC, ML, and very high-performance parallel storage**, use **FSx for Lustre**.
+- For **NetApp features** such as snapshots, replication, and multi-protocol access, use **FSx for NetApp ONTAP**.
+- For **OpenZFS-based NFS workloads**, use **FSx for OpenZFS**.
+
+---
+
+## AWS Storage Gateway
+
+- AWS Storage Gateway is a **hybrid cloud storage** service.
+- It connects on-premises environments to AWS storage services.
+- It gives on-premises applications access to virtually unlimited cloud storage while keeping frequently used data cached locally for lower-latency access.
+- You can deploy it as a virtual appliance in VMware, Hyper-V, or Linux KVM, or as an EC2 instance in AWS.
+
+- **Key takeaway**: AWS Storage Gateway helps extend on-premises storage into AWS without forcing you to rewrite existing applications or workflows.
+
+
+### Benefits of AWS Storage Gateway
+
+  1. **Seamless integration**
+    - It connects existing on-premises applications to AWS storage using familiar interfaces and protocols.
+
+  2. **Local caching**
+    - Frequently accessed data can be cached locally for faster access.
+
+  3. **Centralized hybrid storage**
+    - It simplifies storage management across on-premises infrastructure and AWS.
+
+  4. **Cost optimization**
+    - It reduces the need for large on-premises storage investments by using AWS for backup, archive, and disaster recovery.
+
+
+### Main gateway types
+
+1. **Amazon S3 File Gateway**
+   - Presents file-based access to data in **Amazon S3**.
+   - Supports familiar **NFS** and **SMB** access methods.
+   - Files written locally are stored as objects in Amazon S3.
+   - Frequently accessed data is cached locally.
+   - Common use cases:
+     - Hybrid file shares
+     - Cloud-backed backups
+     - Feeding data lakes in Amazon S3
+
+2. **Volume Gateway**
+   - Presents **iSCSI block storage volumes** to on-premises applications.
+   - Useful when applications expect block storage rather than file storage.
+   - Main modes:
+     - **Cached volumes**: primary data is stored in AWS, while frequently accessed data is cached locally.
+     - **Stored volumes**: primary data is stored locally, and AWS keeps asynchronous backups as **EBS snapshots**.
+
+3. **Tape Gateway**
+   - Replaces physical tape systems with **virtual tapes** in AWS.
+   - Works with existing backup software, so backup workflows do not need major changes.
+   - Virtual tapes are stored in AWS and can be archived for long-term retention.
+   - Common use cases:
+     - Backup modernization
+     - Long-term archive
+     - Disaster recovery
+
+
+### Additional note
+
+- Current AWS documentation also includes **Amazon FSx File Gateway**.
+- It provides on-premises access to **Amazon FSx for Windows File Server** shares.
+
+### Common exam reminders
+
+- AWS Storage Gateway is for **hybrid storage** between on-premises environments and AWS.
+- **S3 File Gateway** is for file-based access to **Amazon S3**.
+- **Volume Gateway** is for **block storage** access using **iSCSI**.
+- **Tape Gateway** is for replacing physical tape backups with virtual tapes in AWS.
+- Storage Gateway is useful for backups, archives, disaster recovery, and extending on-premises storage into the cloud.
+
+
+---
+
+
+## AWS Elastic Disaster Recovery
+
+- AWS Elastic Disaster Recovery (AWS DRS) minimizes downtime and data loss by replicating source servers to AWS.
+- It supports disaster recovery for on-premises and cloud-based applications that run on supported operating systems.
+- Replicated data is stored in a low-cost staging area in your AWS account until you need to launch recovery instances.
+- You can launch recovery instances within minutes for drills or actual recovery.
+- It supports point-in-time recovery and failback after the primary site is restored.
+
+- **Key takeaway**: AWS Elastic Disaster Recovery is for recovering servers and applications quickly after an outage without maintaining a full secondary data center.
+
+
+### Benefits of AWS Elastic Disaster Recovery
+
+  1. **Business resilience**
+    - Helps keep critical applications recoverable with continuous replication and fast recovery.
+
+  2. **Non-disruptive testing**
+    - You can run disaster recovery drills without interrupting production systems.
+
+  3. **Cost optimization**
+    - Uses affordable storage and minimal compute during normal operation, which reduces the cost of standby infrastructure.
+
+  4. **Streamlined recovery**
+    - Recovery settings, replication, drills, and failback can be managed from the AWS console.
+
+
+### Typical use cases
+
+  1. **Healthcare data protection**
+    - Protect patient record systems and keep critical healthcare applications recoverable during outages.
+
+  2. **Financial services continuity**
+    - Replicate core banking or transaction systems so they can be recovered quickly if the primary environment fails.
+
+  3. **Manufacturing operations recovery**
+    - Protect factory planning and supply chain systems to reduce disruption during disasters.
+
+
+### Common exam reminders
+
+- AWS Elastic Disaster Recovery is a **disaster recovery** service, not a primary storage service.
+- It is designed to reduce **downtime** and **data loss**.
+- It supports **drills**, **point-in-time recovery**, and **failback**.
+- It helps replace the need for a costly secondary disaster recovery site.
+
+
+---
+
+
+## AWS Storage Services - Real-Life Use Cases
+
+
+### Amazon S3 example
+
+- **Scenario**: a coffee shop hosts a static website using Amazon S3 static website hosting.
+- **Why S3 fits**:
+  - Static website files are stored as objects.
+  - Amazon S3 scales automatically for traffic spikes.
+  - There is no server management.
+  - It is cost-effective for static content such as HTML, CSS, JavaScript, images, and videos.
+
+
+### Amazon EBS example
+
+- **Scenario**: a fitness center's booking application runs on EC2 and the database becomes a performance bottleneck.
+- **Why EBS fits**:
+  - Amazon EBS provides block storage for EC2 instances.
+  - It offers low latency and strong read/write performance.
+  - A **Provisioned IOPS SSD** volume type is a good fit for mission-critical databases.
+- **Why not S3**:
+  - Amazon S3 is object storage.
+  - It is not designed for block-level database transactions or frequent low-latency updates.
+
+
+### Amazon EFS example
+
+- **Scenario**: an automotive repair business needs shared access to images, videos, diagrams, and repair procedures.
+- **Why EFS fits**:
+  - Multiple EC2 instances and users can access the same files at the same time.
+  - Amazon EFS automatically scales as the dataset grows.
+  - It is well suited for collaborative applications that need shared file storage.
+
+
+### Quick comparison: S3 vs EBS vs EFS
+
+| Feature | Amazon S3 | Amazon EBS | Amazon EFS |
+| --- | --- | --- | --- |
+| Storage type | Object | Block | File |
+| Data access | Objects | Blocks | Files |
+| Attach to EC2 | No | Yes | Yes |
+| Shared by multiple EC2 instances | No | No | Yes |
+| Automatic scaling | Yes | No | Yes |
+| Best for | Static files, backups, media | EC2 storage, databases | Shared file storage |
+| Static website hosting | Yes | No | No |
+
+
+### Which service should you choose?
+
+| Requirement | AWS service |
+| --- | --- |
+| Static website hosting | Amazon S3 |
+| Images, videos, and backups | Amazon S3 |
+| Storage for an EC2 instance | Amazon EBS |
+| Relational database storage | Amazon EBS |
+| High-performance database storage | Amazon EBS with Provisioned IOPS SSD |
+| Shared file system | Amazon EFS |
+| Multiple EC2 instances need the same files | Amazon EFS |
+| Collaborative applications | Amazon EFS |
+
+
+### AWS exam memory trick
+
+- **Amazon S3**: think **objects** and static content.
+- **Amazon EBS**: think **EC2 disk** and block storage.
+- **Amazon EFS**: think **everyone shares files**.
+
+---
