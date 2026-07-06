@@ -730,28 +730,28 @@
 ### Benefits of AWS Elastic Disaster Recovery
 
   1. **Business resilience**
-    - Helps keep critical applications recoverable with continuous replication and fast recovery.
+      - Helps keep critical applications recoverable with continuous replication and fast recovery.
 
   2. **Non-disruptive testing**
-    - You can run disaster recovery drills without interrupting production systems.
+      - You can run disaster recovery drills without interrupting production systems.
 
   3. **Cost optimization**
-    - Uses affordable storage and minimal compute during normal operation, which reduces the cost of standby infrastructure.
+       - Uses affordable storage and minimal compute during normal operation, which reduces the cost of standby infrastructure.
 
   4. **Streamlined recovery**
-    - Recovery settings, replication, drills, and failback can be managed from the AWS console.
+      - Recovery settings, replication, drills, and failback can be managed from the AWS console.
 
 
 ### Typical use cases
 
   1. **Healthcare data protection**
-    - Protect patient record systems and keep critical healthcare applications recoverable during outages.
+      - Protect patient record systems and keep critical healthcare applications recoverable during outages.
 
   2. **Financial services continuity**
-    - Replicate core banking or transaction systems so they can be recovered quickly if the primary environment fails.
+      - Replicate core banking or transaction systems so they can be recovered quickly if the primary environment fails.
 
   3. **Manufacturing operations recovery**
-    - Protect factory planning and supply chain systems to reduce disruption during disasters.
+     - Protect factory planning and supply chain systems to reduce disruption during disasters.
 
 
 ### Common exam reminders
