@@ -208,19 +208,20 @@
 
 - By reducing manual effort and establishing consistent backup policies, Data Lifecycle Manager helps maintain compliance requirements by scheduling regular backups and enforcing retention rules.
 
-    1. **Create an EBS snapshots policy**
+  1. **Create an EBS snapshots policy**
       - Create a policy using the Amazon EC2 console, API calls, AWS CLI, SDKs, or AWS CloudFormation.
 
-    2. **Select the target resource type**
-      - Choose either an EBS volume or an EC2 instance as the target for the snapshot.
+  2. **Select the target resource type**
+        - Choose either an EBS volume or an EC2 instance as the target for the snapshot.
 
-    3. **Exclude volumes**
-      - Narrow down the scope by excluding the root volume or data volumes.
+  3. **Exclude volumes**
+        - Narrow down the scope by excluding the root volume or data volumes.
 
-    4. **Set custom schedules**
-      - Automate the creation, retention, and deletion of EBS snapshots with custom schedules.
+  4. **Set custom schedules**
+        - Automate the creation, retention, and deletion of EBS snapshots with custom schedules.
 
-    5. **Apply additional actions**
-      - Before finalizing the policy, you can configure tags, snapshot archiving, Amazon EBS fast snapshot restore, cross-Region copying, and cross-account sharing.
+  5. **Apply additional actions**
+        - Before finalizing the policy, you can configure tags, snapshot archiving, Amazon EBS fast snapshot restore, cross-Region copying, and cross-account sharing.
 
 ---
+
