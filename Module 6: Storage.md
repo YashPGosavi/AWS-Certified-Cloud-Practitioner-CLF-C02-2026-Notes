@@ -223,5 +223,217 @@
   5. **Apply additional actions**
         - Before finalizing the policy, you can configure tags, snapshot archiving, Amazon EBS fast snapshot restore, cross-Region copying, and cross-account sharing.
 
+
 ---
+
+
+## Amazon Simple Storage Service (Amazon S3)
+
+- Amazon S3 is a fully managed object storage service.
+- It stores data as **objects** inside **buckets**.
+- It is designed for **99.999999999% (11 9's) durability**.
+- It can store virtually unlimited amounts of data.
+- Maximum object size is **5 TB**.
+- Buckets are created in a specific **AWS Region** and have **globally unique names**.
+
+- **Key takeaway**: Amazon S3 is ideal for storing large amounts of unstructured data such as images, videos, backups, logs, and static website content.
+
+
+#### Core concepts
+
+1. **Objects**
+   - An object is the fundamental unit of storage in Amazon S3.
+   - Each object consists of:
+     - the data itself
+     - metadata
+     - a unique key
+   - An object can also have features such as version IDs, tags, and access control settings.
+   - Individual objects can be as large as **5 TB**.
+
+2. **Buckets**
+   - A bucket is a container for objects.
+   - Buckets help organize data and are the main unit for applying policies, permissions, versioning, and logging.
+   - A bucket belongs to one Region, but its name must be unique across all AWS accounts globally.
+   - Buckets can contain a virtually unlimited number of objects.
+
+
+#### Important S3 features
+
+1. **Versioning**
+   - Versioning allows you to keep multiple versions of the same object.
+   - It helps protect against accidental deletion or overwrites.
+
+2. **Storage classes**
+   - Amazon S3 offers multiple storage classes to balance cost and access needs.
+   - Common examples include S3 Standard, S3 Standard-IA, and S3 Glacier storage classes.
+
+3. **Lifecycle management**
+   - Lifecycle rules can automatically transition objects to cheaper storage classes or delete them after a set period.
+   - This helps reduce storage costs over time.
+
+4. **Static website hosting**
+   - Amazon S3 can host static websites made of HTML, CSS, JavaScript, images, and other static files.
+
+
+#### Benefits of Amazon S3
+
+1. **Virtually unlimited scalability**
+   - Amazon S3 automatically scales to store any amount of data.
+
+2. **High durability**
+   - Data is designed to be stored durably across multiple facilities within an AWS Region.
+
+3. **Cost optimization**
+   - You pay only for what you store and use, and lifecycle policies can lower costs further.
+
+4. **Broad use cases**
+   - Common use cases include backups, archives, media storage, log storage, data lakes, disaster recovery, and static website hosting.
+
+
+### Amazon S3 security
+
+- By default, Amazon S3 buckets and objects are **private**.
+- Access must be explicitly granted.
+
+1. **Bucket policies**
+   - Bucket policies are resource-based policies attached directly to buckets.
+   - They define which principals can access the bucket and what actions they can perform.
+
+2. **Identity-based policies**
+   - IAM users, groups, and roles can be granted permissions to S3 resources through identity-based policies.
+
+3. **Presigned URLs**
+   - Presigned URLs allow temporary access to a specific S3 object without making the bucket public.
+
+4. **S3 Access Points**
+   - S3 Access Points provide dedicated access endpoints with their own access policies for specific applications or teams.
+
+5. **Encryption**
+   - Encryption at rest protects stored data.
+   - Encryption in transit protects data moving between clients and Amazon S3.
+
+6. **Audit logs**
+   - Access to Amazon S3 can be monitored using logging and auditing services such as AWS CloudTrail.
+
+### Common exam reminders
+
+- Amazon S3 is **object storage**, not block storage or file storage.
+- Amazon S3 is designed for scalable object storage that can efficiently store and serve various content types (Unstructured Data).
+- Amazon S3 is a **regional** service.
+- Individual objects can be as large as **5 TB**.
+- Buckets can contain a virtually unlimited number of objects.
+- S3 Block Public Access settings override bucket policies, preventing public access even when policies allow it.
+
+
+---
+
+## Amazon S3 Storage Classes and S3 Lifecycle
+
+- Amazon S3 offers multiple storage classes to match different access patterns, resiliency needs, performance requirements, and cost goals.
+- Choosing the right storage class helps optimize storage cost while keeping the right retrieval speed for your workload.
+
+- **Key takeaway**: frequently accessed data belongs in standard classes, while rarely accessed or archival data belongs in infrequent-access or Glacier classes.
+
+### Common S3 storage classes
+
+1. **S3 Standard**
+   - General-purpose storage for frequently accessed data.
+   - Common use cases include dynamic websites, content distribution, mobile applications, and analytics workloads.
+   - If you do not specify a storage class when uploading an object, it is stored in S3 Standard by default.
+
+2. **S3 Intelligent-Tiering**
+   - Best for data with unknown or changing access patterns.
+   - Amazon S3 automatically moves objects between access tiers to reduce cost while maintaining performance.
+
+3. **S3 Standard-IA**
+   - Designed for data that is accessed infrequently but still needs rapid retrieval when required.
+   - Common use cases include long-term backups and disaster recovery files.
+
+4. **S3 One Zone-IA**
+   - Stores data in a single Availability Zone.
+   - Costs less than S3 Standard-IA, but has lower resiliency.
+   - Best for infrequently accessed, re-creatable data such as secondary backups.
+
+5. **S3 Express One Zone**
+   - High-performance storage class for latency-sensitive workloads that need very fast access.
+   - Stores data in a single Availability Zone.
+   - Useful for workloads that require consistent low-latency object access.
+
+6. **S3 Glacier Instant Retrieval**
+   - For archival data that is rarely accessed but still needs millisecond retrieval.
+   - Good when you want archival pricing with fast access.
+
+7. **S3 Glacier Flexible Retrieval**
+   - Low-cost archival storage for data that is accessed rarely, such as once or twice per year.
+   - Retrieval times can range from minutes to hours depending on the retrieval option.
+
+8. **S3 Glacier Deep Archive**
+   - Lowest-cost S3 storage class for long-term retention and compliance archives.
+   - Best for data that is very rarely accessed and can tolerate long retrieval times.
+
+9. **S3 Outposts**
+   - Extends S3 object storage to on-premises AWS Outposts environments.
+   - Useful when workloads must keep data local because of residency, compliance, or low-latency requirements.
+
+
+#### Quick way to think about S3 storage classes
+
+- **Frequently accessed**: S3 Standard
+- **Unknown or changing access patterns**: S3 Intelligent-Tiering
+- **Infrequently accessed but needs fast retrieval**: S3 Standard-IA or S3 One Zone-IA
+- **Archive with instant retrieval**: S3 Glacier Instant Retrieval
+- **Archive with flexible retrieval times**: S3 Glacier Flexible Retrieval
+- **Lowest-cost long-term archive**: S3 Glacier Deep Archive
+
+
+### S3 Lifecycle
+
+- S3 Lifecycle helps automate object management so you do not have to manually move or delete data.
+- Lifecycle rules can apply to individual objects or groups of objects.
+- Two main lifecycle actions are:
+  - **Transition actions**: move objects to another storage class after a defined period.
+  - **Expiration actions**: permanently delete objects after a defined period.
+
+- Lifecycle rules are typically based on **object age**, which makes them useful for automatic cost optimization.
+
+#### Example lifecycle flow
+
+![alt text](Images/Amazon_S3_Lifecycle_configuration.png)
+
+1. **After 30 days**
+   - Move an object from S3 Standard to S3 Standard-IA.
+
+2. **After 60 more days**
+   - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
+
+3. **After 365 days**
+   - Expire the object and permanently delete it.
+
+
+#### Benefits of S3 Lifecycle
+
+1. **Cost savings**
+   - Automatically moves older data to cheaper storage classes.
+
+2. **Less manual work**
+   - Reduces the need to manage storage transitions manually.
+
+3. **Better data retention management**
+   - Helps enforce deletion schedules for temporary or aging data.
+
+4. **Improved operational consistency**
+   - Ensures storage policies are applied consistently across buckets and objects.
+
+
+### Common exam reminders
+
+- S3 Standard is the default storage class.
+- S3 One Zone-IA stores data in only one Availability Zone.
+- Glacier classes are for archival workloads.
+- S3 Lifecycle can automate both transitions and deletions.
+- Intelligent-Tiering is useful when access patterns are unpredictable.
+- Amazon S3 Lifecycle is used create rules that automate the transition of objects between storage classes. It can set expiration dates for objects based on defined criteria, optimizing storage costs while maintaining access to data based on its changing value over time.
+
+---
+
 
