@@ -244,6 +244,7 @@
 - DynamoDB is well suited for workloads with flexible schemas and rapidly growing traffic.
 - It support Auto scaling with provisioned capacity. 
     - Auto scaling with provisioned capacity means that DynamoDB can automatically adjust capacity in response to actual traffic patterns. This keeps application performance consistent during unpredictable peaks in traffic, while optimizing costs during slower periods.
+- Amazon DocumentDB excels at handling semistructured data like product catalogs.
 
 - **Key takeaway**: choose DynamoDB when you need a highly scalable NoSQL database with very low operational overhead.
 
