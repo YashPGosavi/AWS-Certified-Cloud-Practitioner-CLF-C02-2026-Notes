@@ -38,7 +38,7 @@
      - managing access controls
      - using the service correctly for the workload
 
-   ![alt text](Images/storage-fully-managed-service.png)
+![alt text](Images/storage-fully-managed-service.png)
 
 2. **Managed services**
    - In managed database services, AWS handles the underlying infrastructure and many routine tasks.
@@ -53,7 +53,7 @@
      - schema design
      - performance tuning decisions
 
-   ![alt text](Images/storage-managed-service.png)
+![alt text](Images/storage-managed-service.png)
 
 3. **Unmanaged services**
    - In unmanaged database deployments, the customer is responsible for nearly everything.
@@ -68,7 +68,7 @@
      - performance optimization
    - A common example is running a database such as MySQL directly on an **Amazon EC2** instance.
 
-   ![alt text](Images/storage-unmanaged-service.png)
+![alt text](Images/storage-unmanaged-service.png)
 
 ---
 

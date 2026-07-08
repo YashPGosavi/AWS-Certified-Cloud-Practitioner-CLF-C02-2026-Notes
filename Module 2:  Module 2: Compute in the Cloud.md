@@ -268,7 +268,7 @@ Security groups act as **virtual firewalls for EC2 instances**.
    - Pay for instances running on hardware dedicated solely to your account. This option provides isolation from other AWS customers.
 
 7. Capacity Reservations
-   – Reserve capacity in a specific AZ for any duration
+– Reserve capacity in a specific AZ for any duration
    - Good for: Critical workloads with strict capacity requirements
 
 - **NOTE** : Dedicated Hosts offer exclusive use of a server with full control, whereas Dedicated Instances provide isolation without server control.
@@ -356,7 +356,9 @@ Security groups act as **virtual firewalls for EC2 instances**.
 
 ### Messaging and Queuing
 
-    In tightly coupled systems, components are heavily interdependent. If one component fails, it can cause cascading failures. In contrast, loosely coupled systems have components that operate independently, so the failure of one component does not disrupt the entire system.
+In tightly coupled systems, components are heavily interdependent. If one component fails, it can
+cause cascading failures. In contrast, loosely coupled systems have components that operate
+independently, so the failure of one component does not disrupt the entire system.
 
 1. Amazon EventBridge
    - A serverless event bus that routes events from one service to another.

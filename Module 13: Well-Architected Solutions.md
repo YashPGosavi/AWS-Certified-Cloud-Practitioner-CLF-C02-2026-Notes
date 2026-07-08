@@ -2,7 +2,9 @@
 
 ## Introduction to Well-Architected Solutions
 
-AWS offers many specialized services for development, business applications, end-user computing, and IoT. To build reliable systems, it is also important to follow the AWS Well-Architected Framework, which helps ensure that solutions are secure, efficient, resilient, and cost-effective.
+AWS offers many specialized services for development, business applications, end-user computing, and
+IoT. To build reliable systems, it is also important to follow the AWS Well-Architected Framework,
+which helps ensure that solutions are secure, efficient, resilient, and cost-effective.
 
 ### Key takeaway / summary
 
@@ -87,7 +89,8 @@ AWS offers specialized services for four common use case categories.
 
 ## AWS Well-Architected Framework
 
-The AWS Well-Architected Framework provides a structured way to design cloud solutions that are secure, reliable, efficient, and sustainable.
+The AWS Well-Architected Framework provides a structured way to design cloud solutions that are
+secure, reliable, efficient, and sustainable.
 
 ### The six pillars
 
@@ -100,11 +103,13 @@ The AWS Well-Architected Framework provides a structured way to design cloud sol
 
 ### AWS Well-Architected Tool
 
-The AWS Well-Architected Tool is a free service that helps assess and improve workloads using the six pillars. It supports reviews, milestone tracking, and custom lenses for specific business needs.
+The AWS Well-Architected Tool is a free service that helps assess and improve workloads using the
+six pillars. It supports reviews, milestone tracking, and custom lenses for specific business needs.
 
 ### Optimizing a cloud architecture example
 
-An online florist business can improve its architecture by applying the framework across each pillar:
+An online florist business can improve its architecture by applying the framework across each
+pillar:
 
 1. **Operational Excellence**
    - Use EC2 Auto Scaling and infrastructure as code.

@@ -56,7 +56,8 @@
 
 #### Key elements of AWS Global Infrastructure
 
-To review the relationship between Regions, Availability Zones, and edge locations, choose each of the three numbered markers.
+To review the relationship between Regions, Availability Zones, and edge locations, choose each of
+the three numbered markers.
 
 1. **AWS Regions**
    - Regions are geographical areas around the world that are made up of multiple data centers. These data centers provide scalable and redundant infrastructure for hosting cloud services.

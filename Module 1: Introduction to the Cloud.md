@@ -2,7 +2,8 @@
 
 ## What is Cloud Computing
 
-Cloud computing is the **on-demand delivery of computing resources** such as servers, storage, databases, networking, and applications over the internet with **pay-as-you-go pricing**.
+Cloud computing is the **on-demand delivery of computing resources** such as servers, storage,
+databases, networking, and applications over the internet with **pay-as-you-go pricing**.
 
 ### Key Ideas
 

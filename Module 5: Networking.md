@@ -76,7 +76,7 @@
    - It allows public traffic to reach resources in the VPC.
    - Without it, resources in the VPC cannot be accessed from the internet.
 
-   `AWS Cloud → Region → VPC → Availability Zone → Subnet → Resources`
+`AWS Cloud → Region → VPC → Availability Zone → Subnet → Resources`
 
 2. **Virtual private gateway**
    - A virtual private gateway is the virtual private network (VPN) endpoint on the AWS side. It provides a way for you to establish a secure, encrypted connection between your on-premises network and your virtual private cloud (VPC).

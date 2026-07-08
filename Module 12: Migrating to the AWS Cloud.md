@@ -2,7 +2,9 @@
 
 ## Introduction to Migration
 
-Cloud migration is the process of moving an organization’s digital assets, applications, databases, and IT resources from on-premises infrastructure to the AWS Cloud. It usually involves planning, execution, and ongoing management rather than a single one-time move.
+Cloud migration is the process of moving an organization’s digital assets, applications, databases,
+and IT resources from on-premises infrastructure to the AWS Cloud. It usually involves planning,
+execution, and ongoing management rather than a single one-time move.
 
 ### Three phases of the migration process
 
@@ -34,7 +36,8 @@ AWS guides customers through migration in three main phases:
 
 ## AWS Cloud Adoption Framework (AWS CAF)
 
-The AWS Cloud Adoption Framework helps organizations prepare for cloud adoption by providing best practices, guidance, and a structured approach to migration.
+The AWS Cloud Adoption Framework helps organizations prepare for cloud adoption by providing best
+practices, guidance, and a structured approach to migration.
 
 ### Why AWS CAF matters
 
@@ -61,7 +64,8 @@ The AWS Cloud Adoption Framework helps organizations prepare for cloud adoption 
 
 ## Seven Migration Strategies (the 7 Rs)
 
-Organizations can choose different migration strategies depending on application complexity, business goals, timeline, and available resources.
+Organizations can choose different migration strategies depending on application complexity,
+business goals, timeline, and available resources.
 
 ![alt text](Images/seven-migration-strategies.png)
 
@@ -144,7 +148,8 @@ AWS provides several services that support migration at different stages.
 
 ## Database Migrations
 
-Database migration can involve moving to a managed AWS database, changing database engines, or modernizing the architecture.
+Database migration can involve moving to a managed AWS database, changing database engines, or
+modernizing the architecture.
 
 ### Types of database migration
 
@@ -208,7 +213,8 @@ Online data transfer is often used when there is sufficient bandwidth and intern
 
 ## Transferring Data Offline
 
-Offline migration is used when internet connectivity is limited, bandwidth is low, or large amounts of data need to be moved physically.
+Offline migration is used when internet connectivity is limited, bandwidth is low, or large amounts
+of data need to be moved physically.
 
 ### AWS Snowball Edge Storage Optimized
 

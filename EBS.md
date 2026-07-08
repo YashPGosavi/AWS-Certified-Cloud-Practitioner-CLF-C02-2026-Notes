@@ -1,4 +1,3 @@
-
 ### EBS volume basics
 
 - An EBS volume is a network drive you can attach to an instance while it is running.
@@ -6,7 +5,6 @@
 - It can be attached to only one instance at a time at the CCP level.
 - It is bound to a specific Availability Zone.
 - Analogy: think of it as a network USB stick.
-
 
 ### EBS volume characteristics
 
@@ -83,4 +81,3 @@
 - It is good for buffers, caches, scratch data, and temporary content.
 - There is a risk of data loss if hardware fails.
 - Backups and replication are your responsibility.
-

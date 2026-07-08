@@ -2,7 +2,9 @@
 
 ## Introduction to Pricing and Support
 
-AWS pricing, AWS support, and cost optimization all work together to help you manage cloud spend effectively. In this module, you will learn how AWS charges for services, which tools help you track costs, what support options are available, and how to reduce unnecessary spending.
+AWS pricing, AWS support, and cost optimization all work together to help you manage cloud spend
+effectively. In this module, you will learn how AWS charges for services, which tools help you track
+costs, what support options are available, and how to reduce unnecessary spending.
 
 ### Key takeaway / summary
 
@@ -14,7 +16,8 @@ AWS pricing, AWS support, and cost optimization all work together to help you ma
 
 ## AWS Pricing Concepts
 
-AWS uses a pay-as-you-go model for most services. This means you pay only for the resources you use, for as long as you use them, without long-term commitments or complex licensing.
+AWS uses a pay-as-you-go model for most services. This means you pay only for the resources you use,
+for as long as you use them, without long-term commitments or complex licensing.
 
 ### Core pricing concepts
 
@@ -39,7 +42,8 @@ AWS costs are influenced by three major factors:
 
 ### Example: Amazon EC2 scenario
 
-An organization running an online donation application might choose an EC2 instance based on its compute needs. The cost is affected by:
+An organization running an online donation application might choose an EC2 instance based on its
+compute needs. The cost is affected by:
 
 - **Compute**: The instance type and size, such as a low-cost t4g.nano instance.
 - **Storage**: The amount of EBS storage attached to the instance.
@@ -92,7 +96,8 @@ AWS provides several tools to help you plan, track, and manage costs.
 
 ## AWS Support Plans
 
-AWS offers support plans that range from basic self-service help to highly personalized enterprise support.
+AWS offers support plans that range from basic self-service help to highly personalized enterprise
+support.
 
 ### Support plan overview
 
@@ -137,7 +142,8 @@ AWS offers support plans that range from basic self-service help to highly perso
 
 ### AWS Marketplace
 
-The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps customers find, test, and buy software that runs on AWS.
+The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps
+customers find, test, and buy software that runs on AWS.
 
 Common categories include:
 
@@ -147,7 +153,8 @@ Common categories include:
 
 ### AWS Partner Network (APN)
 
-The APN is a global community of partners that build solutions and services on AWS. Working with partners can help organizations solve technical problems and accelerate implementation.
+The APN is a global community of partners that build solutions and services on AWS. Working with
+partners can help organizations solve technical problems and accelerate implementation.
 
 Benefits of becoming an AWS Partner include:
 

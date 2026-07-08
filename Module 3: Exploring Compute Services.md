@@ -39,8 +39,7 @@
 6. perfect for event driven architecture
 
 #### How Lambda works
-
-    Lambda Function -> Triggers -> Runtime
+`Lambda Function -> Triggers -> Runtime`
 
 1. Upload code to lambda
 2. Set a code to trigger from event source
@@ -96,8 +95,7 @@ Container orchestration automatically:
 - Restarts failed containers
 - Manages networking
 
-Easy memory trick:
-Orchestration = Auto-manage containers
+Easy memory trick: Orchestration = Auto-manage containers
 
 #### AWS container services
 

@@ -24,11 +24,15 @@
 
 ### Importance of monitoring
 
-Monitoring your cloud resources is essential because it helps you continuously observe system activity, network traffic, and security events. This allows you to detect potential issues early and maintain the security, availability, reliability, and performance of your workloads.
+Monitoring your cloud resources is essential because it helps you continuously observe system
+activity, network traffic, and security events. This allows you to detect potential issues early and
+maintain the security, availability, reliability, and performance of your workloads.
 
 ![alt text](Images/importance-of-monitoring.png)
 
-Monitoring is typically done through real-time monitoring tools, log collection and analysis, and dashboards. In the following lessons, you will learn about several AWS monitoring tools and their purposes.
+Monitoring is typically done through real-time monitoring tools, log collection and analysis, and
+dashboards. In the following lessons, you will learn about several AWS monitoring tools and their
+purposes.
 
 ### Key takeaway / summary
 
@@ -70,7 +74,8 @@ Monitoring is typically done through real-time monitoring tools, log collection 
 
 ### Example use case
 
-A retail company can use CloudWatch to monitor EC2 application performance, collect logs, trigger alarms when CPU usage becomes too high, and automatically scale resources.
+A retail company can use CloudWatch to monitor EC2 application performance, collect logs, trigger
+alarms when CPU usage becomes too high, and automatically scale resources.
 
 ### Key takeaway / summary
 
@@ -164,7 +169,8 @@ A retail company can use CloudWatch to monitor EC2 application performance, coll
 
 ## Auditing AWS Resources for Compliance
 
-Organizations often need to follow specific configuration rules for their AWS resources. To ensure compliance, they use tools that assess and audit resource settings over time.
+Organizations often need to follow specific configuration rules for their AWS resources. To ensure
+compliance, they use tools that assess and audit resource settings over time.
 
 ### AWS Config
 
@@ -277,7 +283,7 @@ Organizations often need to follow specific configuration rules for their AWS re
   - IAM permissions
   - SCP permissions
 
-  Both must allow the action.
+Both must allow the action.
 
 - **Example**: If IAM allows EC2, S3, and RDS, but the SCP allows only EC2 and S3, then RDS will be blocked.
 
@@ -299,7 +305,8 @@ SCP = Stop, Control, Protect
 
 ### AWS Control Tower
 
-AWS Control Tower helps you set up and govern a secure, compliant, multi-account AWS environment using best practices.
+AWS Control Tower helps you set up and govern a secure, compliant, multi-account AWS environment
+using best practices.
 
 - **Key features**
   - **Dashboard**: provides visibility into provisioned accounts and policy enforcement

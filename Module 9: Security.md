@@ -4,7 +4,8 @@
 
 ### Key concepts
 
-Authentication and authorization are two core security mechanisms that help protect data and systems.
+Authentication and authorization are two core security mechanisms that help protect data and
+systems.
 
 - **Authentication**: verifies the identity of a user or entity using credentials such as a username and password.
   - Example: an employee signs in to an employee portal.
@@ -12,7 +13,8 @@ Authentication and authorization are two core security mechanisms that help prot
 - **Authorization**: determines what actions a user is allowed to perform after authentication.
   - Example: an employee can only view their own employee records.
 
-The diagram shows the difference between authentication (logging in) and authorization (accessing only permitted information).
+The diagram shows the difference between authentication (logging in) and authorization (accessing
+only permitted information).
 
 ![alt text](Images/authentication-and-authorization.png)
 
@@ -60,7 +62,7 @@ AWS provides several security mechanisms to help protect cloud resources by:
 - When you assign permissions, follow the **principle of least privilege**: give users and systems only the access they need and nothing more.
 - IAM provides identities such as users, groups, and roles, and uses policies to define access. This allows you to control permissions based on your organization’s security and operational needs.
 
-**Refer [IMA-Detail](<IAM (Identity and Access Management).md>)**
+**Refer [IMA-Detail](IAM (Identity and Access Management).md)**
 
 ### IAM identities and controls
 
@@ -148,15 +150,20 @@ These services help enforce least privilege and improve access management across
 
 ---
 
-**Que**: An online boutique has recently suffered a series of targeted distributed denial of service (DDoS) attacks. The owner wants to enhance the security of the boutique's web application using AWS infrastructure.
-Which components can the boutique use to protect the web application on AWS from DDoS attacks? (Select TWO.)
+**Que**: An online boutique has recently suffered a series of targeted distributed denial of service
+(DDoS) attacks. The owner wants to enhance the security of the boutique's web application using AWS
+infrastructure. Which components can the boutique use to protect the web application on AWS from
+DDoS attacks? (Select TWO.)
 
 **Ans**:
 
 1. Security groups
 2. Elastic Load Balancing (ELB)
 
-**Reasone**: Security groups make sure only traffic from authenticated users is allowed into the system, while an ELB distributes incoming traffic to prevent any single frontend server from being overwhelmed. Operating at the AWS network level, these components leverage the full capacity of the AWS Region to help absorb large-scale attacks.
+**Reasone**: Security groups make sure only traffic from authenticated users is allowed into the
+system, while an ELB distributes incoming traffic to prevent any single frontend server from being
+overwhelmed. Operating at the AWS network level, these components leverage the full capacity of the
+AWS Region to help absorb large-scale attacks.
 
 ---
 
@@ -164,7 +171,8 @@ Which components can the boutique use to protect the web application on AWS from
 
 ### Data encryption
 
-Data encryption is a core part of protecting information in AWS. It helps keep applications secure and preserves customer trust.
+Data encryption is a core part of protecting information in AWS. It helps keep applications secure
+and preserves customer trust.
 
 #### Encryption basics
 
