@@ -55,7 +55,7 @@
   - Customers are responsible only for data management, access controls, and proper configuration.
   - Customer responsibility is lower than with managed services.
 
-  ![alt text](<Images/Storage_Fully_Managed_Service.png>)
+  ![alt text](<Images/storage-fully-managed-service.png>)
 
 
 2. **Managed services**
@@ -63,7 +63,7 @@
   - Customers are responsible for data backup strategies, encryption configuration, performance optimization, and capacity planning.
   - Customer responsibility increases compared to fully managed services.
 
-  ![alt text](Images/Storage_Managed_Service.png)
+  ![alt text](Images/storage-managed-service.png)
 
 
 3. **Unmanaged services**
@@ -71,7 +71,7 @@
   - AWS maintains only the physical hardware and network infrastructure.
   - Unmanaged services place the greatest responsibility on the customer.
 
-  ![alt text](Images/Storage_Unmanaged_Service.png)
+  ![alt text](Images/storage-unmanaged-service.png)
 
 
 ---
@@ -183,7 +183,7 @@
     - The relationship between snapshots is managed automatically.
     - When you delete one snapshot, only the data unique to that snapshot is removed; data referenced by other snapshots is preserved.
 
-![alt text](Images/Working_with_EBS_snapshots.png)
+![alt text](Images/working-with-ebs-snapshots.png)
 
 
 #### Benefits of EBS snapshots

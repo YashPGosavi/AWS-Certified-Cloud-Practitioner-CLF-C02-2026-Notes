@@ -27,7 +27,7 @@
 ### Importance of monitoring
 Monitoring your cloud resources is essential because it helps you continuously observe system activity, network traffic, and security events. This allows you to detect potential issues early and maintain the security, availability, reliability, and performance of your workloads.
 
-![alt text](<Images/Importance of monitoring.png>)
+![alt text](<Images/importance-of-monitoring.png>)
 
 Monitoring is typically done through real-time monitoring tools, log collection and analysis, and dashboards. In the following lessons, you will learn about several AWS monitoring tools and their purposes.
 
@@ -85,9 +85,6 @@ A retail company can use CloudWatch to monitor EC2 application performance, coll
 
 
 ## AWS CloudTrail
-
-
-### Importance of auditing
 
 - CloudTrail is used to track user activity and API calls across AWS, on-premises systems, and some external environments. 
 - It helps answer questions such as who performed an action, what changed, and when it happened.
@@ -236,7 +233,7 @@ Organizations often need to follow specific configuration rules for their AWS re
 
 ### Key concepts
 
-![alt text](<Images/AWS Organizations.png>)
+![alt text](<Images/aws-organizations.png>)
 
 1. **Organization**
    - A collection of AWS accounts managed from one central location.
@@ -253,6 +250,7 @@ Organizations often need to follow specific configuration rules for their AWS re
 4. **Service control policies (SCPs)**
    - Policies that restrict what users and roles can do in member accounts.
    - SCPs can be applied to OUs or individual accounts.
+   - An SCP is a policy that lets you place restrictions on the AWS services, resources, and individual API actions that users and roles in each account can access. SCPs can be applied to either OUs or individual member accounts.
 
 5. **Member account not in an OU**
    - A member account can still be part of the organization even if it is not placed under an OU.
@@ -327,7 +325,8 @@ AWS Control Tower helps you set up and govern a secure, compliant, multi-account
 
 
 ### AWS Service Catalog
-AWS Service Catalog lets you create and share a curated catalog of approved AWS resources and services.
+- AWS Service Catalog lets you create and share a curated catalog of approved AWS resources and services.
+- With Service Catalog, you can create, share, and organize from a curated catalog of AWS resources. You can deploy baseline networking resources and security tools for new AWS accounts so that you can govern consistently.
 
 - **Benefits**
     - Makes approved resources easy to find and deploy
@@ -387,6 +386,7 @@ AWS License Manager helps organizations manage software licenses and reduce comp
 
 ## AWS Trusted Advisor
 - AWS Trusted Advisor continuously evaluates your AWS environment against AWS best practices in areas such as security, cost optimization, performance, and resilience.
+- Trusted Advisor helps you optimize costs, increase performance, improve security and resilience, and operate at scale in the cloud.
 
 - **Key features**
     - Checks your environment against best-practice recommendations

@@ -2,13 +2,13 @@
 
 ### Going global with AWS infrastructure
 
-1. How to choose a Region or set of Regions
+1. **How to choose a Region or set of Regions**
     - If we were to expand our coffee shop by opening new locations, there would be multiple things to consider, like customer demand and development cost. Similarly, you have several factors to consider when selecting a Region or set of Regions for your real-life resources.
 
-2. AWS edge locations
+2. **AWS edge locations**
     - Like our coffee franchise could expand with smaller versions of the shop such as mobile coffee carts, AWS has smaller footprint facilities called edge locations. Edge locations cache items like images, videos, and other resources, so that users can access the content they need with lower latency.
 
-3. Infrastructure as code and CloudFormation
+3. **Infrastructure as code and CloudFormation**
     - Another important consideration of a coffee shop expansion would be to maintain a consistent product from location to location. 
     - AWS has services, such as CloudFormation, that you can use to help automate the deployment of your cloud resources. These services use infrastructure as code, or IaC, helping you achieve a consistent, reliable set up each time your business grows.
 
@@ -76,17 +76,19 @@ To review the relationship between Regions, Availability Zones, and edge locatio
 
 
 #### Amazon cloudfromt 
-    - It is content delevary network, uses edge locations.
-    - Uses
-        - Images
-        - Videos
-        - Websites
-        - Static files
-        - APIs
+
+- It is content delevary network, uses edge locations.
+- Uses
+    - Images
+    - Videos
+    - Websites
+    - Static files
+    - APIs
 
 
 #### Amazon Root53 
-    - AWS DNS (Domain Name System) service.
+
+- AWS DNS (Domain Name System) service.
 
 
 #### Summery 
@@ -102,13 +104,13 @@ To review the relationship between Regions, Availability Zones, and edge locatio
 
 #### CloudFormation
 
-    CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. 
+- CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. 
     
-    With CloudFormation, you can define your infrastructure as code. You create a template that describes all the AWS resources that you want (like Amazon Elastic Compute Cloud (Amazon EC2) instances), and CloudFormation takes care of provisioning and configuring those resources for you.
+- With CloudFormation, you can define your infrastructure as code. You create a template that describes all the AWS resources that you want (like Amazon Elastic Compute Cloud (Amazon EC2) instances), and CloudFormation takes care of provisioning and configuring those resources for you.
 
-    CloudFormation is designed to handle complex infrastructure setups. It defines infrastructure as code to help make sure that deployments are consistent across different environments such as development, testing, and production.
+- CloudFormation is designed to handle complex infrastructure setups. It defines infrastructure as code to help make sure that deployments are consistent across different environments such as development, testing, and production.
 
-    With CloudFormation, users can model and set up their AWS resources using code to automate provisioning and the management of infrastructure. This method can help to reduce errors and maintain consistency across environments.
+- With CloudFormation, users can model and set up their AWS resources using code to automate provisioning and the management of infrastructure. This method can help to reduce errors and maintain consistency across environments.
 
 
 #### Interacting with AWS resources

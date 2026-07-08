@@ -32,7 +32,7 @@ Cloud security is a shared responsibility between AWS and the customer.
         - the virtualization layer
         - the hardware and global infrastructure that supports AWS Regions, Availability Zones, and edge locations
 
-![alt text](<Images/Shared Responsibility Model.png>)
+![alt text](<Images/shared-responsibility-model.png>)
 
 
 ### AWS security controls
@@ -61,7 +61,7 @@ AWS provides several security mechanisms to help protect cloud resources by:
 
 ### IAM identities and controls
 
-![alt text](Images/IMA.png)
+![alt text](Images/ima.png)
 
 1. **AWS account root user**
    - The root user is the account owner and has full access to the AWS account.
@@ -188,7 +188,7 @@ Data encryption is a core part of protecting information in AWS. It helps keep a
 
 - SSL/TLS certificates are commonly used to establish encrypted connections. They are specifically designed to encrypt data as it moves between systems over networks.
 
-![alt text](<Images/Types of data encryption.png>)
+![alt text](<Images/types-of-data-encryption.png>)
 
 
 ### AWS data protection

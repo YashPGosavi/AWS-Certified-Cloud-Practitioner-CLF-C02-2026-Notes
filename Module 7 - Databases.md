@@ -38,7 +38,7 @@
         - managing access controls
         - using the service correctly for the workload
 
-    ![alt text](Images/Storage_Fully_Managed_Service.png)
+    ![alt text](Images/storage-fully-managed-service.png)
 
 
 2. **Managed services**
@@ -54,7 +54,7 @@
         - schema design
         - performance tuning decisions
 
-    ![alt text](Images/Storage_Managed_Service.png)
+    ![alt text](Images/storage-managed-service.png)
 
 
 3. **Unmanaged services**
@@ -70,7 +70,7 @@
         - performance optimization
     - A common example is running a database such as MySQL directly on an **Amazon EC2** instance.
 
-    ![alt text](Images/Storage_Unmanaged_Service.png)
+    ![alt text](Images/storage-unmanaged-service.png)
 
 ---
 
@@ -334,7 +334,7 @@
 
 - **Key takeaway**: ElastiCache helps you add high-speed caching without managing the cache infrastructure yourself.
 
-![alt text](Images/Database_ElastaCache.png)
+![alt text](Images/database-elastacache.png)
 
 
 ### Common use cases for ElastiCache

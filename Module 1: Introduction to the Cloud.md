@@ -143,7 +143,7 @@ Used to define **security responsibilities between AWS and the customer**.
     - Components such as server-side encryption, network traffic protection, platform and application management, and OS, network, and firewall configuration vary by service in terms of who is responsible for these items. 
 
 
-![alt text](<Images/Shared Responsibility Model.png>)
+![alt text](<Images/shared-responsibility-model.png>)
 
 ---
 

@@ -93,9 +93,10 @@ Requires **root access**.
 
 ### EC2 Instance Types
 
-    1. Amazon EC2 offers a broad range of instance types, each tailored to meet specific use case requirements. 
-    2. These instances come with varying combinations of CPU, memory, storage, and networking capabilities, so you can choose the right mix of resources to optimize performance for your applications.
-    3. Each Amazon EC2 instance type is grouped under an instance family
+1. Amazon EC2 offers a broad range of instance types, each tailored to meet specific use case requirements. 
+2. These instances come with varying combinations of CPU, memory, storage, and networking capabilities, so you can choose the right mix of resources to optimize performance for your applications.
+3. Each Amazon EC2 instance type is grouped under an instance family
+
 
 #### Amazon EC2 instance families (IMP)
 
@@ -239,11 +240,12 @@ Security groups act as **virtual firewalls for EC2 instances**.
 
 ### What are the required configurations when launching an Amazon EC2 instance for a web serve
 
-    1. AMI (Amazon Machine Image)
-    2. Intance Type
-    3. Storage
+1. AMI (Amazon Machine Image)
+2. Intance Type
+3. Storage
     
-    To launch an EC2 instance for a web server, configure the AMI to define the operating system and software; select the instance type to allocate CPU, memory, and storage; and set up storage options, including the type and size of the volume.
+
+- To launch an EC2 instance for a web server, configure the AMI to define the operating system and software; select the instance type to allocate CPU, memory, and storage; and set up storage options, including the type and size of the volume.
 
 ---
 ### AMI (Amazon Machine Images)
@@ -288,12 +290,13 @@ Security groups act as **virtual firewalls for EC2 instances**.
 - **NOTE** : Dedicated Hosts offer exclusive use of a server with full control, whereas Dedicated Instances provide isolation without server control.
 
 #### These are analogies for AWS EC2 purchasing options:
-    1. On-Demand → Pay-as-you-go
-    2. Reserved Instances → Long-term commitment for discounts
-    3. Savings Plans → Flexible commitment with discounted pricing
-    4. Spot Instances → Cheapest option, but can be interrupted
-    5. Dedicated Hosts → Entire physical server dedicated to you
-    6. Capacity Reservations → Reserve capacity in advance without a discount
+
+1. **On-Demand** → Pay-as-you-go
+2. **Reserved Instances** → Long-term commitment for discounts
+3. **Savings Plans** → Flexible commitment with discounted pricing
+4. **Spot Instances** → Cheapest option, but can be interrupted
+5. **Dedicated Hosts** → Entire physical server dedicated to you
+6. **Capacity Reservations** → Reserve capacity in advance without a discount
 
 ---
 

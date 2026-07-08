@@ -31,37 +31,37 @@
 
 #### AWS Network Diagram
 
-![alt text](Images/Network_diagrams.png)
+![alt text](Images/network-diagrams.png)
 
-    1. AWS Cloud
-        - Outermost layer in architecture diagrams.
-        - Contains all AWS infrastructure.
-        
-    2. Region
-        - A separate geographic area.
-        - Choose based on:
-            1. Low latency
-            2. Compliance requirements
-            3. Data residency
-            4. Service availability
-            5. Cost
+1. **AWS Cloud**
+    - Outermost layer in architecture diagrams.
+    - Contains all AWS infrastructure.
+    
+2. **Region**
+    - A separate geographic area.
+    - Choose based on:
+        1. Low latency
+        2. Compliance requirements
+        3. Data residency
+        4. Service availability
+        5. Cost
 
-    3. Amazon VPC
-        - Logically isolated network inside a Region.
-        - Controls networking and security for AWS resources.
+3. **Amazon VPC**
+    - Logically isolated network inside a Region.
+    - Controls networking and security for AWS resources.
 
-    4. Availability Zone (AZ)
-        - One or more physically separate data centers.
-        - Each AZ has:
-            1. Redundant power
-            2. Networking
-            3. Connectivity
-        - Deploying across multiple AZs improves high availability and fault tolerance.
+4. **Availability Zone (AZ)**
+    - One or more physically separate data centers.
+    - Each AZ has:
+        1. Redundant power
+        2. Networking
+        3. Connectivity
+    - Deploying across multiple AZs improves high availability and fault tolerance.
 
-    5. Subnets
-        - Segments inside a VPC.
-        - Organize resources based on accessibility and security.
-        - Can be Public or Private.
+5. **Subnets**
+    - Segments inside a VPC.
+    - Organize resources based on accessibility and security.
+    - Can be Public or Private.
 
 
 ---
@@ -74,7 +74,7 @@
     - Without limits, traffic could move freely between resources.
     - AWS helps you group resources, isolate them, and control who can access them.
 
-![alt text](Images/Network_Gateways.png)
+![alt text](Images/network-gateways.png)
 
 
 1. **Internet gateway**
@@ -111,7 +111,7 @@
 - **Virtual private network** 
     - A VPN encrypts your internet traffic, helping protect it from anyone who might try to intercept or monitor it.
 
---
+---
 
 ## Connecting to the AWS Cloud
 
@@ -172,7 +172,7 @@
 
 ## Subnets, Security Groups, and Network Access Control Lists
 
-![alt text](Images/Network_traffic_control.png)
+![alt text](Images/network-traffic-control.png)
 
 1. **Subnets**
     - A subnet is a section of a VPC where you group resources based on security or operational needs, It is a network segment within a Virtual Private Cloud (VPC) .
@@ -216,7 +216,7 @@
 - Securing subnets and resources in a VPC with network ACLs and security groups is your responsibility.
 - These components are important defenses for protecting applications in the cloud.
 
-![alt text](Images/Networking_Shared_responsibility_model.png)
+![alt text](Images/networking-shared-responsibility-model.png)
 
 ---
 

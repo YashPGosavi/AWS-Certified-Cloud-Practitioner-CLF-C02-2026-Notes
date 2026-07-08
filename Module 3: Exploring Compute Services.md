@@ -20,7 +20,7 @@
     - Example :
         - Lambda is a serverless compute service where AWS handles the infrastructure, scaling, and availability, while you remain responsible for securing and managing your application code.
 
-![alt text](<Images/Module 3: Unmanaged and managed services.png>)
+![alt text](<Images/module-3-unmanaged-and-managed-services.png>)
 
 
 ---
@@ -28,28 +28,28 @@
 
 ### AWS Lambda
 
-    1. Lambda is a serverless compute service where AWS handles the infrastructure, scaling, and availability, while you remain responsible for securing and managing your application code.
-    
-    2. It also known as function as a service.
-    
-    3. You are charged only for the compute time consumed, down to the millisecond. Lambda handles execution, scaling, and resource allocation. You can optimize performance by configuring the appropriate memory size for your function.
-    
-    4. Run code automatically when an event occurs—without managing servers.
-    
-    5. Supports different programming laguanges
+1. Lambda is a serverless compute service where AWS handles the infrastructure, scaling, and availability, while you remain responsible for securing and managing your application code.
 
-    6. perfect for event driven architecture
+2. It also known as function as a service.
+
+3. You are charged only for the compute time consumed, down to the millisecond. Lambda handles execution, scaling, and resource allocation. You can optimize performance by configuring the appropriate memory size for your function.
+
+4. Run code automatically when an event occurs—without managing servers.
+
+5. Supports different programming laguanges
+
+6. perfect for event driven architecture
 
 
 
 #### How Lambda works
 
     Lambda Function -> Triggers -> Runtime
-    
-    1. Upload code to lambda
-    2. Set a code to trigger from event source
-    3. Run code when triggered
-    4. Pay only for compute time used
+
+1. Upload code to lambda
+2. Set a code to trigger from event source
+3. Run code when triggered
+4. Pay only for compute time used
 
 #### Lambda use cases
 
