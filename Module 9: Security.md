@@ -54,7 +54,7 @@ AWS provides several security mechanisms to help protect cloud resources by:
 
 - AWS Identity and Access Management (IAM) helps you securely manage identities and access to AWS services and resources.
 - One of the best ways to prevent security incidents is through proper permission and access management. With IAM, all actions are denied by default, and permissions must be granted explicitly.
-- When you assign permissions, follow the principle of least privilege: give users and systems only the access they need and nothing more.
+- When you assign permissions, follow the **principle of least privilege**: give users and systems only the access they need and nothing more.
 - IAM provides identities such as users, groups, and roles, and uses policies to define access. This allows you to control permissions based on your organization’s security and operational needs.
 
 **Refer [IMA-Detail](<IAM (Identity and Access Management).md>)**
@@ -89,7 +89,7 @@ AWS provides several security mechanisms to help protect cloud resources by:
 
 These services help enforce least privilege and improve access management across AWS environments.
 
-- **AWS IAM Identity Center**
+- **AWS IAM Identity Center** : Sinlge sign on (SSO)
   - Centralizes identity and access management across AWS accounts and applications.
   - Supports single sign-on and federated identity management.
 
@@ -186,7 +186,7 @@ Data encryption is a core part of protecting information in AWS. It helps keep a
 
 2. **Encryption in transit**: protects data while it is moving between systems, such as from a database to an application.
 
-SSL/TLS certificates are commonly used to establish encrypted connections.
+- SSL/TLS certificates are commonly used to establish encrypted connections. They are specifically designed to encrypt data as it moves between systems over networks.
 
 ![alt text](<Images/Types of data encryption.png>)
 
