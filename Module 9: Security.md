@@ -168,3 +168,101 @@ Which components can the boutique use to protect the web application on AWS from
 
 ## Protecting Data
 
+### Data encryption
+Data encryption is a core part of protecting information in AWS. It helps keep applications secure and preserves customer trust.
+
+#### Encryption basics
+
+- Encryption works like a lock-and-key system:
+    - An encryption key transforms readable data into unreadable data.
+    - A decryption key is required to recover the original information.
+
+- For example, a customer’s profile can be encrypted so it appears as random characters until the correct key is used to read it.
+
+
+#### Types of data encryption
+
+1. **Encryption at rest**: protects data while it is stored, such as in a database or file system.
+
+2. **Encryption in transit**: protects data while it is moving between systems, such as from a database to an application.
+
+SSL/TLS certificates are commonly used to establish encrypted connections.
+
+![alt text](<Images/Types of data encryption.png>)
+
+
+### AWS data protection
+
+AWS provides built-in data protection features and specialized services to help secure your data.
+
+#### Built-in data protection
+
+1. **Amazon S3**: new S3 buckets are encrypted by default, and uploaded objects are protected at rest.
+
+2. **Amazon EBS**: EBS volumes and snapshots can be encrypted at rest, including boot and data volumes.
+
+3. **Amazon DynamoDB**: server-side encryption at rest is enabled by default using keys managed in AWS KMS.
+
+
+#### AWS data protection services
+
+1. **AWS Key Management Service (AWS KMS)**: creates and manages cryptographic keys used to encrypt and decrypt data.
+
+2. **Amazon Macie**: detects and helps protect sensitive data stored in Amazon S3 using machine learning and automation.
+
+3. **AWS Certificate Manager (ACM)**: manages SSL/TLS certificates for encrypting data in transit.
+
+
+### Key takeaway / summary
+- Encryption protects data both at rest and in transit.
+- AWS services like S3, EBS, and DynamoDB support encryption by default or through configuration.
+- KMS, Macie, and ACM are important services for managing keys, discovering sensitive data, and securing network connections.
+
+
+---
+
+
+## Detecting and Responding to Security Incidents
+
+- Preventing and protecting against security threats is essential, but you should also be prepared to detect and respond to incidents when they occur. AWS provides several services to help with this.
+
+    1. **Amazon Inspector** : Vulnerability scanning
+        - Amazon Inspector runs automated security assessments for EC2 instances, containers, and Lambda functions. 
+        - It helps identify vulnerabilities and deviations from security best practices.
+
+    2. **Amazon GuardDuty** : Threat detection service
+        - Amazon GuardDuty detects threats by continuously monitoring account activity, network behavior, and known malicious indicators. 
+        - It provides findings and recommended remediation steps.
+
+    3. **Amazon Detective** : Security investigation and root cause analysis
+        - Amazon Detective helps investigate security incidents by visualizing resource and user activity over time. 
+        - It is useful for understanding the root cause of a threat.
+        - Detective is specifically designed for interactive analysis and investigating security threats over time using visualizations. It's a suitable choice for the team's investigation.
+
+    4. **AWS Security Hub** : Aggregation of security findings across multiple AWS services
+        - AWS Security Hub brings security findings from multiple AWS and partner services into a single view. - It helps you monitor your security posture and respond more efficiently.
+
+### Key takeaway / summary
+- Detection services identify potential threats early.
+- Investigation tools help determine the root cause of incidents.
+- Centralized security dashboards improve visibility and response speed.
+
+
+---
+
+## Additional Security Resources
+
+### AWS Marketplace security resources
+
+- The AWS Marketplace provides a digital catalog where you can purchase third-party software and services that run on AWS. This includes the following types of security services.
+
+    1. **Threat detection and prevention tools** : Identify and block malicious activities.
+
+    2. **Identity and access management tools** : Control user permissions and authentication.
+
+    3. **Data protection tools** : Encrypt and safeguard sensitive information.
+
+    4. **Compliance and governance tools** : Meet security regulatory requirements.
+
+---
+
