@@ -1,4 +1,4 @@
-# Module 10 - Monitoring, Compliance and Governance in the AWS Cloud
+# Module 10: Monitoring, Compliance and Governance in the AWS Cloud
 
 ## Introduction to Monitoring, Compliance, and Governance in the AWS Cloud
 
@@ -63,7 +63,7 @@ Monitoring is typically done through real-time monitoring tools, log collection 
 4. **Logs**
    - Centralizes logs from applications, systems, and AWS services for analysis.
 
-![alt text](<Images/CloudWatch feature.png>)
+![alt text](<Images/cloudWatch-feature.png>)
 
 
 ### Benefits of CloudWatch

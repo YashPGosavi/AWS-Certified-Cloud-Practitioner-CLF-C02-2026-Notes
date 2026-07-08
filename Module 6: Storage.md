@@ -398,7 +398,7 @@
 
 #### Example lifecycle flow
 
-![alt text](Images/Amazon_S3_Lifecycle_configuration.png)
+![alt text](Images/amazon-s3-lifecycle-configuration.png)
 
   1. **After 30 days**
     - Move an object from S3 Standard to S3 Standard-IA.

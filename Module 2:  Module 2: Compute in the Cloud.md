@@ -233,7 +233,7 @@ Security groups act as **virtual firewalls for EC2 instances**.
 
 - An unmanaged service like Amazon EC2 requires you to perform all of the necessary security configuration and management tasks. When you deploy an EC2 instance, you are responsible for configuring security, managing the guest operating system (OS), applying updates, and setting up firewalls (security groups). 
 
-![alt text](Images/EC2_Shared_Responsibility_Model.png)
+![alt text](Images/ec2-shared-responsibility-model.png)
 
 
 ---
@@ -392,15 +392,14 @@ Security groups act as **virtual firewalls for EC2 instances**.
 3. Amazon SNS (Simple Notification Service)
     - A publish-subscribe (Pub/Sub) messaging service.
     - One publisher sends a message to many subscribers at the same time.
-    - 
 
-    - Advantages
+    - **Advantages**
         - One message reaches multiple subscribers instantly.
         - Subscribers choose what they want to receive.
         - Supports Email, SMS, Lambda, HTTP, Mobile Push, and SQS.
         - SNS → Sends one message to multiple subscribers simultaneously.
 
-    - Example : With Amazon SNS, the company can send personalized notifications to subscribers based on their specific interests. Amazon SNS makes sure that these notifications are promptly delivered to the right audience, improving the efficiency and relevance of the communication.
+    - **Example** : With Amazon SNS, the company can send personalized notifications to subscribers based on their specific interests. Amazon SNS makes sure that these notifications are promptly delivered to the right audience, improving the efficiency and relevance of the communication.
 
 
 ---

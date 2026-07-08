@@ -1,4 +1,4 @@
-# Module 8 - AI ML and Data Analytics
+# Module 8: AI ML and Data Analytics
 
 ## Introduction to AI and Machine Learning
 

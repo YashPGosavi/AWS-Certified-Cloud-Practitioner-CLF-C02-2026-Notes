@@ -13,7 +13,7 @@ Authentication and authorization are two core security mechanisms that help prot
 
 The diagram shows the difference between authentication (logging in) and authorization (accessing only permitted information).
 
-![alt text](<Images/Authentication and authorization.png>)
+![alt text](<Images/authentication-and-authorization.png>)
 
 
 ### AWS shared responsibility model
