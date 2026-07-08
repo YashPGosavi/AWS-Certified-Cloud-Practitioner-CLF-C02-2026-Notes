@@ -24,53 +24,51 @@
 - Most of the database services in this module are fully managed, with a few managed services and no core focus on unmanaged options.
 
 1. **Fully managed services**
-    - In fully managed database services, AWS handles most operational work.
-    - AWS responsibilities typically include:
-        - provisioning
-        - scaling
-        - patching
-        - backups
-        - routine maintenance
-        - monitoring and metrics
-        - much of the underlying availability and infrastructure management
-    - Customer responsibilities mainly include:
-        - designing the data model
-        - managing access controls
-        - using the service correctly for the workload
+   - In fully managed database services, AWS handles most operational work.
+   - AWS responsibilities typically include:
+     - provisioning
+     - scaling
+     - patching
+     - backups
+     - routine maintenance
+     - monitoring and metrics
+     - much of the underlying availability and infrastructure management
+   - Customer responsibilities mainly include:
+     - designing the data model
+     - managing access controls
+     - using the service correctly for the workload
 
-    ![alt text](Images/storage-fully-managed-service.png)
-
+   ![alt text](Images/storage-fully-managed-service.png)
 
 2. **Managed services**
-    - In managed database services, AWS handles the underlying infrastructure and many routine tasks.
-    - AWS responsibilities typically include:
-        - hardware provisioning
-        - automated backups
-        - patching support
-        - infrastructure maintenance
-    - Customer responsibilities typically include:
-        - database engine configuration
-        - query optimization
-        - schema design
-        - performance tuning decisions
+   - In managed database services, AWS handles the underlying infrastructure and many routine tasks.
+   - AWS responsibilities typically include:
+     - hardware provisioning
+     - automated backups
+     - patching support
+     - infrastructure maintenance
+   - Customer responsibilities typically include:
+     - database engine configuration
+     - query optimization
+     - schema design
+     - performance tuning decisions
 
-    ![alt text](Images/storage-managed-service.png)
-
+   ![alt text](Images/storage-managed-service.png)
 
 3. **Unmanaged services**
-    - In unmanaged database deployments, the customer is responsible for nearly everything.
-    - Customer responsibilities include:
-        - installation
-        - configuration
-        - patching
-        - maintenance
-        - database security
-        - backups
-        - high availability setup
-        - performance optimization
-    - A common example is running a database such as MySQL directly on an **Amazon EC2** instance.
+   - In unmanaged database deployments, the customer is responsible for nearly everything.
+   - Customer responsibilities include:
+     - installation
+     - configuration
+     - patching
+     - maintenance
+     - database security
+     - backups
+     - high availability setup
+     - performance optimization
+   - A common example is running a database such as MySQL directly on an **Amazon EC2** instance.
 
-    ![alt text](Images/storage-unmanaged-service.png)
+   ![alt text](Images/storage-unmanaged-service.png)
 
 ---
 
@@ -90,11 +88,10 @@
 
 - A restaurant inventory database might store each product as one record.
 
-| ID | Product Name | Size | Price |
-| --- | --- | --- | --- |
-| 1 | Medium roast ground coffee | 12 oz. | $13.95 |
-| 2 | Single-origin whole bean coffee | 12 oz. | $21.95 |
-
+| ID  | Product Name                    | Size   | Price  |
+| --- | ------------------------------- | ------ | ------ |
+| 1   | Medium roast ground coffee      | 12 oz. | $13.95 |
+| 2   | Single-origin whole bean coffee | 12 oz. | $21.95 |
 
 ---
 
@@ -102,11 +99,11 @@
 
 - Amazon RDS is a **fully managed** relational database service that makes it easier to set up, operate, and scale relational databases in AWS.
 - It handles many routine administrative tasks such as:
-    - Automated patching
-    - Backups
-    - Redundancy
-    - Failover
-    - Disaster recovery
+  - Automated patching
+  - Backups
+  - Redundancy
+  - Failover
+  - Disaster recovery
 - Amazon RDS uses DB instance classes that can be optimized for general-purpose, memory-optimized, compute-optimized, or burstable workloads.
 - Aurora provides comparable performance to high-end commercial databases but at one-tenth the cost, which makes it ideal for organizations looking to reduce database costs without sacrificing performance.
 
@@ -121,26 +118,24 @@
   - IBM Db2
 - **Amazon Aurora** is also part of the Amazon RDS family, but it is usually studied as its own AWS-built relational engine.
 
-
 ### Key Amazon RDS features
 
 1. **Automated backups and snapshots**
-    - Amazon RDS can create automated backups for point-in-time recovery.
-    - You can also create manual **DB snapshots** when you want a user-initiated backup.
+   - Amazon RDS can create automated backups for point-in-time recovery.
+   - You can also create manual **DB snapshots** when you want a user-initiated backup.
 
 2. **Multi-AZ deployments**
-    - Amazon RDS can maintain a synchronous standby instance in another Availability Zone.
-    - If the primary instance fails, Amazon RDS can automatically fail over to the standby instance.
+   - Amazon RDS can maintain a synchronous standby instance in another Availability Zone.
+   - If the primary instance fails, Amazon RDS can automatically fail over to the standby instance.
 
 3. **Read replicas**
-    - Read replicas can help scale read-heavy workloads by offloading read traffic from the primary database.
+   - Read replicas can help scale read-heavy workloads by offloading read traffic from the primary database.
 
 4. **Security**
-    - Amazon RDS supports VPC isolation, encryption at rest, and encryption in transit.
+   - Amazon RDS supports VPC isolation, encryption at rest, and encryption in transit.
 
 5. **Scalability**
-    - You can scale compute and storage based on workload needs.
-
+   - You can scale compute and storage based on workload needs.
 
 ### Common use cases for Amazon RDS
 
@@ -148,7 +143,6 @@
 - Enterprise applications
 - E-commerce product catalogs and inventories
 - Traditional relational workloads that need managed operations
-
 
 ### Benefits of Amazon RDS
 
@@ -164,7 +158,6 @@
 4. **Cost optimization**
    - You avoid the upfront cost of buying and maintaining your own database hardware.
 
-
 ---
 
 ## Amazon Aurora
@@ -175,7 +168,6 @@
 - It uses distributed storage that grows automatically as needed.
 
 - **Key takeaway**: choose Aurora when you want a cloud-native relational database with MySQL or PostgreSQL compatibility and stronger performance and availability than standard deployments.
-
 
 ### Key Amazon Aurora features
 
@@ -193,7 +185,6 @@
 4. **Automated backups**
    - Aurora continuously backs up data and supports point-in-time recovery.
 
-
 ### Common use cases for Amazon Aurora
 
 - Gaming applications
@@ -201,7 +192,6 @@
 - SaaS applications
 - Enterprise applications
 - Real-time or high-throughput relational workloads
-
 
 ### Common exam reminders
 
@@ -230,11 +220,10 @@
 
 - In a key-value design, each item can have different attributes.
 
-| Key | Value |
-| --- | --- |
-| 1 | Name: John Doe; Address: 123 Any Street; Favorite drink: Medium latte |
-| 2 | Name: Mary Major; Address: 100 Main Street; Birthday: July 5, 1994 |
-
+| Key | Value                                                                 |
+| --- | --------------------------------------------------------------------- |
+| 1   | Name: John Doe; Address: 123 Any Street; Favorite drink: Medium latte |
+| 2   | Name: Mary Major; Address: 100 Main Street; Birthday: July 5, 1994    |
 
 ### Amazon DynamoDB
 
@@ -242,12 +231,11 @@
 - It supports both **key-value** and **document** data models.
 - It is designed for applications that need consistent **single-digit millisecond** performance at any scale.
 - DynamoDB is well suited for workloads with flexible schemas and rapidly growing traffic.
-- It support Auto scaling with provisioned capacity. 
-    - Auto scaling with provisioned capacity means that DynamoDB can automatically adjust capacity in response to actual traffic patterns. This keeps application performance consistent during unpredictable peaks in traffic, while optimizing costs during slower periods.
+- It support Auto scaling with provisioned capacity.
+  - Auto scaling with provisioned capacity means that DynamoDB can automatically adjust capacity in response to actual traffic patterns. This keeps application performance consistent during unpredictable peaks in traffic, while optimizing costs during slower periods.
 - Amazon DocumentDB excels at handling semistructured data like product catalogs.
 
 - **Key takeaway**: choose DynamoDB when you need a highly scalable NoSQL database with very low operational overhead.
-
 
 ### Common use cases for DynamoDB
 
@@ -256,7 +244,6 @@
 - Mobile applications with large or global user bases
 - Serverless applications
 - High-traffic web and event-driven applications
-
 
 ### Key DynamoDB features
 
@@ -277,7 +264,6 @@
 5. **Security**
    - DynamoDB supports IAM-based access control and encryption at rest.
    - Data can be encrypted with AWS owned, AWS managed, or customer managed KMS keys.
-
 
 ### Benefits of DynamoDB
 
@@ -301,7 +287,6 @@
 - By default, it replicates data across **three AZs in one Region**.
 - **Global tables** are used for multi-Region replication.
 
-
 ---
 
 ## In-Memory Caching Services
@@ -322,7 +307,6 @@
 
 - **Key takeaway**: use in-memory caching when you need very fast access to frequently requested data.
 
-
 ### Amazon ElastiCache
 
 - Amazon ElastiCache is a fully managed in-memory caching service.
@@ -331,11 +315,9 @@
 - AWS manages tasks such as hardware provisioning, patching, monitoring, and failed node replacement.
 - ElastiCache addresses performance bottlenecks by caching frequently accessed data in memory, to reduce the load on primary databases and improve response times.
 
-
 - **Key takeaway**: ElastiCache helps you add high-speed caching without managing the cache infrastructure yourself.
 
 ![alt text](Images/database-elastacache.png)
-
 
 ### Common use cases for ElastiCache
 
@@ -345,12 +327,11 @@
 - API response caching
 - High-throughput application acceleration
 
-
 ### Key Amazon ElastiCache features
 
 1. **High performance**
-    - ElastiCache provides very low-latency access to frequently used data.
-    - It is designed to improve application performance and reduce pressure on backend databases.
+   - ElastiCache provides very low-latency access to frequently used data.
+   - It is designed to improve application performance and reduce pressure on backend databases.
 
 2. **Managed operations**
    - AWS handles routine tasks such as provisioning, patching, monitoring, and node replacement.
@@ -364,7 +345,6 @@
 5. **Security**
    - ElastiCache supports encryption at rest and encryption in transit.
    - In-transit encryption uses **TLS** to protect data moving between clients and cache nodes.
-
 
 ### Benefits of Amazon ElastiCache
 
@@ -380,7 +360,6 @@
 4. **Lower operational overhead**
    - AWS manages the caching infrastructure so you can focus on application logic.
 
-
 ### Common exam reminders
 
 - ElastiCache is an **in-memory caching** service, not a primary relational or NoSQL database.
@@ -389,60 +368,59 @@
 - Caching reduces load on backend databases and improves latency.
 - ElastiCache is a good choice for **session stores**, **query caching**, and **leaderboards**.
 
-
 ---
-
 
 ## Additional Database Services
 
 ### Amazon DocumentDB (Unstructured)
+
 - Amazon DocumentDB is a fully managed database service designed for semistructured data.
 - It stores JSON-like documents with dynamic schemas, making it useful when schemas change often.
 - It is **MongoDB-compatible**, so existing MongoDB tools and applications can often be used with minimal changes.
 
 - **Use cases**
-    - Content management systems
-    - Catalog and inventory management
-    - User profiles and personalization systems
+  - Content management systems
+  - Catalog and inventory management
+  - User profiles and personalization systems
 
 - **Benefits**
-    - **MongoDB compatibility**: Works with MongoDB APIs, drivers, and tools.
-    - **Performance and scalability**: Storage can scale up to 64 TB, and compute can be adjusted as needed.
-    - **Increased read throughput**: Supports up to 15 replica instances that share underlying storage.
-
+  - **MongoDB compatibility**: Works with MongoDB APIs, drivers, and tools.
+  - **Performance and scalability**: Storage can scale up to 64 TB, and compute can be adjusted as needed.
+  - **Increased read throughput**: Supports up to 15 replica instances that share underlying storage.
 
 ### Amazon Neptune (Graph)
+
 - Amazon Neptune is a fully managed graph database service.
 - It is designed for highly connected data such as social networks, fraud detection, and recommendation systems.
 - It is optimized for relationship-heavy queries and graph data models.
 
 - **Use cases**
-    - Social network connection mapping
-    - Fraud detection systems
-    - Search and recommendation systems
+  - Social network connection mapping
+  - Fraud detection systems
+  - Search and recommendation systems
 
 - **Benefits**
-    - **Purpose-built for complex relationships**: Works well with graph models and relationship mapping.
-    - **High performance and scalability**: Handles billions of relationships efficiently and scales storage up to 64 TB.
-
+  - **Purpose-built for complex relationships**: Works well with graph models and relationship mapping.
+  - **High performance and scalability**: Handles billions of relationships efficiently and scales storage up to 64 TB.
 
 ### AWS Backup
+
 - AWS Backup is a centralized service for protecting AWS resources and on-premises data.
 - It can manage backups for Amazon EBS, Amazon EFS, and databases from a single dashboard.
 - It helps automate backup policies and improve disaster recovery readiness.
 
 - **Use cases**
-    - Centralized disaster recovery
-    - Compliance-driven backup policies
-    - Consolidating multiple backup processes into one tool
+  - Centralized disaster recovery
+  - Compliance-driven backup policies
+  - Consolidating multiple backup processes into one tool
 
 - **Benefits**
-    - **Centralized backup management**: One place to monitor backup jobs and restore points.
-    - **Cross-Region backup redundancy**: Helps protect data in case of a regional outage.
-    - **Streamlined regulatory compliance**: Supports audit logs and policy enforcement.
-
+  - **Centralized backup management**: One place to monitor backup jobs and restore points.
+  - **Cross-Region backup redundancy**: Helps protect data in case of a regional outage.
+  - **Streamlined regulatory compliance**: Supports audit logs and policy enforcement.
 
 ### AWS Database Migration Service (AWS DMS)
+
 - AWS Database Migration Service (AWS DMS) is a **fully managed migration service** that helps you migrate databases to AWS quickly and securely.
 - It supports migrating databases with **minimal downtime**, allowing source databases to remain operational during the migration process.
 - AWS DMS can migrate data between **homogeneous** (same database engine) and **heterogeneous** (different database engines) databases.
@@ -451,28 +429,25 @@
 - **Key takeaway**: Use AWS DMS to migrate databases to AWS with **minimal downtime** while keeping the source database available during migration.
 
 - **How AWS DMS works**
-
-    1. **Source database** : Connect AWS DMS to the source database (on-premises or cloud).
-    2. **Replication instance** : AWS DMS uses a replication instance to read data from the source database and transfer it to the target database.
-    3. **Target database** : Data is migrated to the target database in AWS or another supported destination.
-    4. **Continuous replication (optional)** : After the initial data load, AWS DMS can continuously replicate ongoing changes until you are ready to switch applications to the target database.
+  1. **Source database** : Connect AWS DMS to the source database (on-premises or cloud).
+  2. **Replication instance** : AWS DMS uses a replication instance to read data from the source database and transfer it to the target database.
+  3. **Target database** : Data is migrated to the target database in AWS or another supported destination.
+  4. **Continuous replication (optional)** : After the initial data load, AWS DMS can continuously replicate ongoing changes until you are ready to switch applications to the target database.
 
 - **Benefits**
+  1. **Minimal downtime**
+     - Source database remains operational during migration.
+     - Continuous replication minimizes application downtime during cutover.
 
-    1. **Minimal downtime**
-        - Source database remains operational during migration.
-        - Continuous replication minimizes application downtime during cutover.
+  2. **Supports multiple database engines**
+     - Works with popular commercial and open-source databases.
+     - Supports both homogeneous and heterogeneous migrations.
 
-    2. **Supports multiple database engines**
-        - Works with popular commercial and open-source databases.
-        - Supports both homogeneous and heterogeneous migrations.
+  3. **Managed service**
+     - AWS manages infrastructure, monitoring, and failover for the replication instance.
+     - Reduces administrative effort.
 
-    3. **Managed service**
-        - AWS manages infrastructure, monitoring, and failover for the replication instance.
-        - Reduces administrative effort.
-
-    4. **Continuous data replication**
-        - Keeps the target database synchronized with ongoing source database changes until migration is complete.
-
+  4. **Continuous data replication**
+     - Keeps the target database synchronized with ongoing source database changes until migration is complete.
 
 ---

@@ -5,6 +5,7 @@
 AWS pricing, AWS support, and cost optimization all work together to help you manage cloud spend effectively. In this module, you will learn how AWS charges for services, which tools help you track costs, what support options are available, and how to reduce unnecessary spending.
 
 ### Key takeaway / summary
+
 - AWS uses a flexible pricing model that helps you pay only for what you use.
 - Cost management tools help you monitor, forecast, and control spending.
 - Support plans and partner resources help you get help when you need it.
@@ -44,9 +45,10 @@ An organization running an online donation application might choose an EC2 insta
 - **Storage**: The amount of EBS storage attached to the instance.
 - **Data transfer**: Outbound traffic sent to another service for analytics.
 
-![alt text](<Images/aws-pricing-scenario.png>)
+![alt text](Images/aws-pricing-scenario.png)
 
 ### Key takeaway / summary
+
 - AWS pricing is mainly driven by compute, storage, and outbound data transfer.
 - Choosing the right instance size and storage options can significantly affect cost.
 
@@ -57,26 +59,32 @@ An organization running an online donation application might choose an EC2 insta
 AWS provides several tools to help you plan, track, and manage costs.
 
 ### AWS Organizations
+
 - Centralizes billing and account management for multiple AWS accounts.
 - Helps apply organization-wide policies and simplify governance.
 
 ### AWS Billing and Cost Management dashboard
+
 - Shows current charges, usage, forecasts, and cost breakdowns.
 - Helps you manage payment methods, invoices, and billing details.
 
 ### AWS Budgets
+
 - Lets you set spending thresholds and receive alerts.
 - Useful for avoiding unexpected cost increases.
 
 ### AWS Cost Explorer
+
 - Provides charts and reports to analyze historical spending.
 - Helps identify trends and cost-saving opportunities.
 
 ### AWS Pricing Calculator
+
 - Allows you to estimate costs before deploying resources.
 - Useful for comparing different configurations and services.
 
 ### Key takeaway / summary
+
 - Billing tools help you forecast, track, and control AWS spend more effectively.
 - The AWS Pricing Calculator is especially useful before deployment.
 
@@ -119,6 +127,7 @@ AWS offers support plans that range from basic self-service help to highly perso
 - **AWS documentation**: A large self-service library for troubleshooting and learning.
 
 ### Key takeaway / summary
+
 - Support plans vary based on workload criticality and business needs.
 - AWS also offers documentation, expert guidance, and consulting resources beyond the basic support tier.
 
@@ -127,22 +136,27 @@ AWS offers support plans that range from basic self-service help to highly perso
 ## AWS Marketplace and AWS Partner Network
 
 ### AWS Marketplace
+
 The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps customers find, test, and buy software that runs on AWS.
 
 Common categories include:
+
 - **Software as a Service (SaaS)**: business apps, collaboration tools, and marketing platforms.
 - **Machine learning and AI**: prebuilt models and ML tools.
 - **Data and analytics**: BI tools, reporting platforms, and integration services.
 
 ### AWS Partner Network (APN)
+
 The APN is a global community of partners that build solutions and services on AWS. Working with partners can help organizations solve technical problems and accelerate implementation.
 
 Benefits of becoming an AWS Partner include:
+
 - funding opportunities
 - partner events and training
 - access to AWS programs and certification resources
 
 ### Key takeaway / summary
+
 - AWS Marketplace helps you discover ready-made software solutions.
 - AWS Partners can help you build and scale solutions more effectively.
 
@@ -173,11 +187,11 @@ Cost optimization is about using the right resources, at the right size, and for
    - Use S3 Intelligent-Tiering for workloads with changing access patterns.
    - Use VPC endpoints to reduce data transfer costs.
 
-![alt text](<Images/cost-optimization.png>)
+![alt text](Images/cost-optimization.png)
 
 ### Key takeaway / summary
+
 - Cost optimization focuses on rightsizing, automation, and choosing the best service options for your workload.
 - Smart storage and compute choices can significantly reduce AWS spend.
-
 
 ---

@@ -5,6 +5,7 @@
 AWS offers many specialized services for development, business applications, end-user computing, and IoT. To build reliable systems, it is also important to follow the AWS Well-Architected Framework, which helps ensure that solutions are secure, efficient, resilient, and cost-effective.
 
 ### Key takeaway / summary
+
 - AWS provides purpose-built services for many different business and technical needs.
 - The Well-Architected Framework helps you evaluate and improve cloud architecture.
 
@@ -17,56 +18,68 @@ AWS offers specialized services for four common use case categories.
 ### Development services
 
 **AWS CodeBuild**
+
 - A fully managed build service that compiles code, runs tests, and produces deployable artifacts.
 - Scales automatically and charges only for build time used.
 
 **AWS CodePipeline**
+
 - A fully managed CI/CD service that automates build, test, and deployment stages.
 - Helps teams deliver updates quickly and reliably.
 
 **AWS X-Ray**
+
 - A tracing and debugging tool for analyzing application performance.
 - Helps identify bottlenecks and troubleshoot issues.
 
 **AWS AppSync**
+
 - A managed GraphQL service for building APIs that connect frontend apps to backend data sources.
 - Supports secure access and data combination across services.
 
 **AWS Amplify**
+
 - Helps developers build and deploy full-stack applications quickly.
 - Simplifies features like authentication, APIs, storage, and hosting.
 
 ### Business application services
 
 **Amazon Connect**
+
 - A cloud contact center service for customer support and call routing.
 - Supports recording, analytics, and integration with AWS services.
 
 **Amazon SES**
+
 - A cost-effective email service for transactional and marketing messages.
 - Useful for high-volume automated email delivery.
 
 ### End-user computing services
 
 **Amazon AppStream 2.0**
+
 - Streams applications to users from the cloud without requiring high-end local devices.
 - Useful for delivering software to remote users.
 
 **Amazon WorkSpaces**
+
 - Provides managed virtual desktop environments.
 - Lets employees access their work environment securely from many devices.
 
 **Amazon WorkSpaces Secure Browser**
+
 - Provides a secure browser environment for private websites and SaaS apps.
 - Reduces the need for VPNs and special client software.
 
 ### IoT services
 
 **AWS IoT Core**
+
 - Connects physical devices to cloud applications securely.
 - Supports device data ingestion, processing, and control.
 
 ### Key takeaway / summary
+
 - Development services support CI/CD and application monitoring.
 - Business, end-user, and IoT services help solve specialized real-world use cases.
 
@@ -115,6 +128,7 @@ An online florist business can improve its architecture by applying the framewor
    - Reduce waste by right-sizing workloads and using elastic services.
 
 ### Key takeaway / summary
+
 - The Well-Architected Framework helps you improve architecture across six important dimensions.
 - AWS tools such as the Well-Architected Tool and Compute Optimizer support this process.
 
@@ -158,6 +172,6 @@ AWS services can be combined to solve specific business problems.
    - Customers can choose a callback or switch to text through Lambda.
 
 ### Key takeaway / summary
+
 - Serverless and contact-center solutions can be built by combining multiple AWS services.
 - These examples show how AWS services work together to solve business needs.
-

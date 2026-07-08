@@ -8,9 +8,7 @@
 
 - **Key takeaway**: AI is the umbrella term, and ML is one way to build AI systems.
 
-
 ---
-
 
 ## AI/ML on AWS
 
@@ -24,30 +22,26 @@
 ### AWS AI/ML stack
 
 - **AI services**
-   - Pre-built, fully managed services that are already trained for specific tasks.
+  - Pre-built, fully managed services that are already trained for specific tasks.
 
 - **ML services**
-   - More customizable services where you build, train, and deploy your own models.
-   - The main service here is **Amazon SageMaker AI**.
+  - More customizable services where you build, train, and deploy your own models.
+  - The main service here is **Amazon SageMaker AI**.
 
 - **ML frameworks and infrastructure**
-   - The most custom option for experienced ML teams.
-   - Uses ML frameworks and AWS infrastructure to build solutions from the ground up.
-
+  - The most custom option for experienced ML teams.
+  - Uses ML frameworks and AWS infrastructure to build solutions from the ground up.
 
 ---
-
 
 ## AWS AI/ML Solutions
 
 - The AWS AI/ML stack can be thought of as a progression from easy-to-use pre-built services to highly customized ML environments.
 
-
 ### Tier 1: Pre-built AWS AI services
 
 - These services are already trained and ready to use.
 - They help you solve common problems without building models from scratch.
-
 
 #### Language services
 
@@ -78,7 +72,6 @@
      - document translation
      - multilingual applications
 
-
 #### Computer vision and search services
 
 1. **Amazon Kendra**
@@ -102,7 +95,6 @@
      - healthcare forms
      - government document processing
 
-
 #### Conversational AI and personalization services
 
 1. **Amazon Lex**
@@ -118,7 +110,6 @@
      - streaming recommendations
      - product recommendations
      - trending recommendations
-
 
 ### Tier 2: ML services
 
@@ -146,7 +137,6 @@
 3. **Repeatable ML workflows**
    - Helps standardize MLOps practices, governance, transparency, and auditability.
 
-
 ### Tier 3: ML frameworks and infrastructure
 
 - This tier is for organizations that need complete control over the ML training process.
@@ -168,9 +158,7 @@
      - Amazon EMR
      - Amazon ECS
 
-
 ---
-
 
 ## Introduction to Generative AI on AWS
 
@@ -180,7 +168,6 @@
 - **Large language models (LLMs)** are a popular type of foundation model.
 
 - **Key takeaway**: traditional ML is often task-specific, while generative AI uses foundation models that can be adapted to multiple tasks.
-
 
 ### Generative AI on AWS
 
@@ -195,9 +182,7 @@ AWS offers these generative AI options:
 3. **Amazon Q**
    - Interactive AI assistant that connects to company knowledge and systems.
 
-
 ---
-
 
 ## AWS Generative AI Solutions
 
@@ -221,7 +206,6 @@ AWS offers these generative AI options:
 3. **ML experiments and prototypes**
    - Compare different models before committing to one approach.
 
-
 ### Amazon Bedrock
 
 - Amazon Bedrock is a fully managed service for building generative AI applications with foundation models.
@@ -238,7 +222,6 @@ AWS offers these generative AI options:
 
 3. **Advanced conversational AI**
    - Build assistants that can connect to enterprise data.
-
 
 ### Amazon Q products
 
@@ -258,9 +241,7 @@ AWS offers these generative AI options:
      - reliability and security improvements
      - automated code reviews
 
-
 ---
-
 
 ## Introduction to Data Analytics
 
@@ -279,9 +260,7 @@ AWS offers these generative AI options:
   - analyzing clinical trial data
   - supporting regulatory transparency
 
-
 ---
-
 
 ## Data Pipelines on AWS
 

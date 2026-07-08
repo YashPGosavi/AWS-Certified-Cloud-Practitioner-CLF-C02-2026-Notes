@@ -2,46 +2,47 @@
 
 - AWS provides many solutions for storing, accessing, managing, and backing up your data in the cloud. These virtual storage systems eliminate the need for physical hardware in your data center while offering the flexibility to scale as your needs change.
 - AWS offers three distinct types of cloud storage to meet diverse requirements and application needs:
-    1. block storage
-    2. object storage
-    3. file storage
+  1. block storage
+  2. object storage
+  3. file storage
 
 1. **Block storage**
-  - Block storage provides persistent, low-latency block-level storage volumes that attach to EC2 instances like physical hard drives.
-  - Volumes can be encrypted, backed up via snapshots, and modified while in use without disrupting the instance.
-  - AWS block storage services include:
-    1. **Amazon EC2 instance store**
-      - Unmanaged, non-persistent, high-performance block storage directly attached to EC2 instances.
-      - Best for temporary data that does not need to persist after instance termination.
-    2. **Amazon Elastic Block Store (EBS)**
-      - Managed, persistent block storage volumes for EC2 instances.
-      - Offers different volume types for varying workload performance and cost needs.
 
+- Block storage provides persistent, low-latency block-level storage volumes that attach to EC2 instances like physical hard drives.
+- Volumes can be encrypted, backed up via snapshots, and modified while in use without disrupting the instance.
+- AWS block storage services include:
+  1. **Amazon EC2 instance store**
+  - Unmanaged, non-persistent, high-performance block storage directly attached to EC2 instances.
+  - Best for temporary data that does not need to persist after instance termination.
+  2. **Amazon Elastic Block Store (EBS)**
+  - Managed, persistent block storage volumes for EC2 instances.
+  - Offers different volume types for varying workload performance and cost needs.
 
 2. **Object storage**
-  - Object storage manages data as objects in a flat address space.
-  - It provides unlimited scalability so you can store vast amounts of unstructured data without worrying about capacity constraints.
-  - Object storage offers rich metadata capabilities for better data management, search, and analytics across large datasets.
-  - Primary AWS object storage service:
-    - **Amazon Simple Storage Service (S3)**: Fully managed, scalable object storage for storing and retrieving any amount of data from anywhere.
+
+- Object storage manages data as objects in a flat address space.
+- It provides unlimited scalability so you can store vast amounts of unstructured data without worrying about capacity constraints.
+- Object storage offers rich metadata capabilities for better data management, search, and analytics across large datasets.
+- Primary AWS object storage service:
+  - **Amazon Simple Storage Service (S3)**: Fully managed, scalable object storage for storing and retrieving any amount of data from anywhere.
 
 3. **File storage**
-  - AWS file storage services provide shared file systems accessible over networks, allowing multiple users and applications to access the same data simultaneously.
-  - They offer scalability and flexibility so capacity can expand without managing physical infrastructure.
-  - AWS file storage services include:
-    1. **Amazon Elastic File System (EFS)**
-      - Fully managed, scalable NFS file system for AWS Cloud services and on-premises resources.
-    2. **Amazon FSx**
-      - Fully managed file storage for popular file systems such as Windows, Lustre, and NetApp ONTAP.
 
+- AWS file storage services provide shared file systems accessible over networks, allowing multiple users and applications to access the same data simultaneously.
+- They offer scalability and flexibility so capacity can expand without managing physical infrastructure.
+- AWS file storage services include:
+  1. **Amazon Elastic File System (EFS)**
+  - Fully managed, scalable NFS file system for AWS Cloud services and on-premises resources.
+  2. **Amazon FSx**
+  - Fully managed file storage for popular file systems such as Windows, Lustre, and NetApp ONTAP.
 
 ### Additional storage services
 
 - These AWS storage services do not fit neatly into the block, object, or file categories but are important to know:
   1. **AWS Storage Gateway**
-    - Fully managed hybrid-cloud storage service providing on-premises access to virtually unlimited cloud storage.
+  - Fully managed hybrid-cloud storage service providing on-premises access to virtually unlimited cloud storage.
   2. **AWS Elastic Disaster Recovery**
-    - Fully managed service that streamlines recovery of physical, virtual, and cloud-based servers into AWS.
+  - Fully managed service that streamlines recovery of physical, virtual, and cloud-based servers into AWS.
 
 ### AWS shared responsibility for storage
 
@@ -51,31 +52,30 @@
   - Unmanaged
 
 1. **Fully managed services**
-  - AWS is responsible for hardware, infrastructure, durability, availability, encryption at rest, and replication.
-  - Customers are responsible only for data management, access controls, and proper configuration.
-  - Customer responsibility is lower than with managed services.
 
-  ![alt text](<Images/storage-fully-managed-service.png>)
+- AWS is responsible for hardware, infrastructure, durability, availability, encryption at rest, and replication.
+- Customers are responsible only for data management, access controls, and proper configuration.
+- Customer responsibility is lower than with managed services.
 
+![alt text](Images/storage-fully-managed-service.png)
 
 2. **Managed services**
-  - AWS handles underlying storage infrastructure, hardware redundancy, and volume replication.
-  - Customers are responsible for data backup strategies, encryption configuration, performance optimization, and capacity planning.
-  - Customer responsibility increases compared to fully managed services.
 
-  ![alt text](Images/storage-managed-service.png)
+- AWS handles underlying storage infrastructure, hardware redundancy, and volume replication.
+- Customers are responsible for data backup strategies, encryption configuration, performance optimization, and capacity planning.
+- Customer responsibility increases compared to fully managed services.
 
+![alt text](Images/storage-managed-service.png)
 
 3. **Unmanaged services**
-  - Customers take full responsibility for data management, backup/recovery, encryption, performance optimization, and durability.
-  - AWS maintains only the physical hardware and network infrastructure.
-  - Unmanaged services place the greatest responsibility on the customer.
 
-  ![alt text](Images/storage-unmanaged-service.png)
+- Customers take full responsibility for data management, backup/recovery, encryption, performance optimization, and durability.
+- AWS maintains only the physical hardware and network infrastructure.
+- Unmanaged services place the greatest responsibility on the customer.
 
+![alt text](Images/storage-unmanaged-service.png)
 
 ---
-
 
 ## EC2 Instance Store and Amazon Elastic Block Store (Amazon EBS)
 
@@ -88,24 +88,22 @@
 - **Key takeaway**: no data persistence
   - An Amazon EC2 instance store provides temporary block-level storage for an Amazon EC2 instance. If you stop or terminate the instance, all data written to the attached instance store is deleted.
 
-
 #### How data is handled
 
-  1. **Step 1**: An EC2 instance is running with data stored in an EC2 instance store.
-  2. **Step 2**: The EC2 instance is stopped.
-  3. **Step 3**: After the EC2 instance is stopped or terminated, all data in the EC2 instance store is lost.
-
+1. **Step 1**: An EC2 instance is running with data stored in an EC2 instance store.
+2. **Step 2**: The EC2 instance is stopped.
+3. **Step 3**: After the EC2 instance is stopped or terminated, all data in the EC2 instance store is lost.
 
 #### Benefits Of EC2 Instance Storage
 
 1. **Automatically available storage**
-    - Instance store volumes are automatically attached to many EC2 instance types, providing temporary block-level storage at no additional cost. Because the storage is physically connected to the host computer, it offers high I/O performance for data that disappears when the instance stops.
+   - Instance store volumes are automatically attached to many EC2 instance types, providing temporary block-level storage at no additional cost. Because the storage is physically connected to the host computer, it offers high I/O performance for data that disappears when the instance stops.
 
 2. **Cost effective**
-    - Because EC2 instance store is included in the EC2 instance price, you do not pay an additional storage fee. It is ideal for temporary storage needs such as buffers, caches, or scratch data, which can reduce costs for applications that do not require persistent storage.
+   - Because EC2 instance store is included in the EC2 instance price, you do not pay an additional storage fee. It is ideal for temporary storage needs such as buffers, caches, or scratch data, which can reduce costs for applications that do not require persistent storage.
 
 3. **High performance**
-    - EC2 instance store offers extremely low-latency storage directly attached to the host server of your EC2 instance. This proximity provides excellent I/O performance, making it ideal for temporary data that requires fast processing.
+   - EC2 instance store offers extremely low-latency storage directly attached to the host server of your EC2 instance. This proximity provides excellent I/O performance, making it ideal for temporary data that requires fast processing.
 
 ---
 
@@ -113,8 +111,8 @@
 
 - Amazon EBS provides persistent block-level storage volumes for use with Amazon EC2 instances. EBS volumes act like external hard drives and provide consistent, low-latency performance for workloads such as databases and file systems.
 - EBS volumes have a lifecycle that is independent from EC2 instances. They can be detached from one instance and attached to another, and the data remains intact even if the instance is shut down or terminated.
-- EBS volumes can be backed up, resized, and attached to different EC2 instances. 
-- To create an EBS volume, you define its size and type. After the volume is created, it can be attached to an Amazon EC2 instance. Because EBS volumes are intended for data that must persist, it is important to back up the data. 
+- EBS volumes can be backed up, resized, and attached to different EC2 instances.
+- To create an EBS volume, you define its size and type. After the volume is created, it can be attached to an Amazon EC2 instance. Because EBS volumes are intended for data that must persist, it is important to back up the data.
 - Amazon EBS ensures data protection through automatic replication within the same Availability Zone.
 - **It is recommended to take incremental backups by creating Amazon EBS snapshots**.
 
@@ -122,33 +120,31 @@
 
 - **Use cases Of EBS** : Some common use cases for Amazon EBS include database hosting, backup storage for applications, and rapid deployment of development environments using volume snapshots.
 
-
 #### How data is handled
 
-  1. **Step 1**: An EC2 instance is running with data stored in an attached EBS volume.
-  2. **Step 2**: The EC2 instance is stopped.
-  3. **Step 3**: After the EC2 instance is stopped or terminated, all data stored in the EBS volume is retained.
-
+1. **Step 1**: An EC2 instance is running with data stored in an attached EBS volume.
+2. **Step 2**: The EC2 instance is stopped.
+3. **Step 3**: After the EC2 instance is stopped or terminated, all data stored in the EBS volume is retained.
 
 #### Benefits Of EBS
 
 1. **Data portability**
-    - EBS volumes can be detached and reattached to instances as needed, making it easier to manage workloads and move data between instances.
+   - EBS volumes can be detached and reattached to instances as needed, making it easier to manage workloads and move data between instances.
 
 2. **Data migration**
-    - EBS volumes can be migrated between Availability Zones using snapshots. Snapshots provide a simple way to move data across regions or create copies.
+   - EBS volumes can be migrated between Availability Zones using snapshots. Snapshots provide a simple way to move data across regions or create copies.
 
 3. **Instance type changes**
-    - Because EBS volumes remain independent of EC2 instances, they can be attached to different instance types. This flexibility allows you to upgrade or downgrade instances without losing data.
+   - Because EBS volumes remain independent of EC2 instances, they can be attached to different instance types. This flexibility allows you to upgrade or downgrade instances without losing data.
 
 4. **Disaster recovery**
-    - EBS snapshots provide reliable backup solutions that can be restored in different regions during emergencies. Regular automated snapshots help protect your data and support fast recovery.
+   - EBS snapshots provide reliable backup solutions that can be restored in different regions during emergencies. Regular automated snapshots help protect your data and support fast recovery.
 
 5. **Cost optimization**
-    - EBS volumes can be modified to different types and sizes to match actual usage patterns. You can switch between storage types or adjust capacity without downtime.
+   - EBS volumes can be modified to different types and sizes to match actual usage patterns. You can switch between storage types or adjust capacity without downtime.
 
 6. **Performance tuning**
-    - Amazon EBS offers various volume types to match different workload requirements and IOPS needs. You can adjust volume performance characteristics as application demands change.
+   - Amazon EBS offers various volume types to match different workload requirements and IOPS needs. You can adjust volume performance characteristics as application demands change.
 
 ---
 
@@ -163,69 +159,64 @@
 - EBS snapshots are stored redundantly across multiple Availability Zones using Amazon S3.
 
 #### Working with EBS snapshots
+
 - As the customer, you are responsible for scheduling and managing regular EBS snapshots as part of your backup strategy.
 - This includes monitoring snapshot costs, deleting unnecessary snapshots, ensuring sensitive data is encrypted, verifying snapshot integrity, and testing restoration procedures regularly.
-
 
 ### EBS Snapshot lifecycle
 
 1. **Initial snapshot**
-    - The first snapshot creates a full copy of all data on the volume at that point in time.
-    - It acts as the baseline and includes all data blocks in use on the volume.
+   - The first snapshot creates a full copy of all data on the volume at that point in time.
+   - It acts as the baseline and includes all data blocks in use on the volume.
 
 2. **Subsequent incremental snapshots**
-    - After the initial snapshot, only the blocks that changed since the last snapshot are captured.
-    - These are called incremental snapshots and are smaller and faster to create than full snapshots.
-    - Each incremental snapshot references earlier snapshots, enabling point-in-time recovery.
+   - After the initial snapshot, only the blocks that changed since the last snapshot are captured.
+   - These are called incremental snapshots and are smaller and faster to create than full snapshots.
+   - Each incremental snapshot references earlier snapshots, enabling point-in-time recovery.
 
 3. **Snapshot consolidation and management**
-    - Even though snapshots are incremental, each one appears as a full point-in-time copy of the volume.
-    - The relationship between snapshots is managed automatically.
-    - When you delete one snapshot, only the data unique to that snapshot is removed; data referenced by other snapshots is preserved.
+   - Even though snapshots are incremental, each one appears as a full point-in-time copy of the volume.
+   - The relationship between snapshots is managed automatically.
+   - When you delete one snapshot, only the data unique to that snapshot is removed; data referenced by other snapshots is preserved.
 
 ![alt text](Images/working-with-ebs-snapshots.png)
-
 
 #### Benefits of EBS snapshots
 
 1. **Data protection and recovery**
-    - Snapshots enable fast recovery from corruption, accidental deletion, or system failures through point-in-time backups.
+   - Snapshots enable fast recovery from corruption, accidental deletion, or system failures through point-in-time backups.
 
 2. **Operational flexibility**
-    - Snapshots support cross-Region data migration, volume resizing, volume cloning, and sharing data across AWS accounts.
+   - Snapshots support cross-Region data migration, volume resizing, volume cloning, and sharing data across AWS accounts.
 
 3. **Cost effectiveness**
-    - Snapshots use incremental backup technology, storing only changed blocks after the initial backup, which reduces storage costs and backup time.
-
+   - Snapshots use incremental backup technology, storing only changed blocks after the initial backup, which reduces storage costs and backup time.
 
 #### Amazon Data Lifecycle Manager
-  - You can automate the creation, retention, and deletion of EBS snapshots using Amazon Data Lifecycle Manager.
-  - It can schedule snapshots during off-peak hours to minimize performance impact and automatically delete outdated backups to control storage costs.
-  - It is especially useful for large-scale deployments where manual snapshot management would be time-consuming and error-prone.
 
+- You can automate the creation, retention, and deletion of EBS snapshots using Amazon Data Lifecycle Manager.
+- It can schedule snapshots during off-peak hours to minimize performance impact and automatically delete outdated backups to control storage costs.
+- It is especially useful for large-scale deployments where manual snapshot management would be time-consuming and error-prone.
 
 #### Amazon Data Lifecycle Manager workflow
 
 - By reducing manual effort and establishing consistent backup policies, Data Lifecycle Manager helps maintain compliance requirements by scheduling regular backups and enforcing retention rules.
-
   1. **Create an EBS snapshots policy**
-      - Create a policy using the Amazon EC2 console, API calls, AWS CLI, SDKs, or AWS CloudFormation.
+     - Create a policy using the Amazon EC2 console, API calls, AWS CLI, SDKs, or AWS CloudFormation.
 
   2. **Select the target resource type**
-        - Choose either an EBS volume or an EC2 instance as the target for the snapshot.
+     - Choose either an EBS volume or an EC2 instance as the target for the snapshot.
 
   3. **Exclude volumes**
-        - Narrow down the scope by excluding the root volume or data volumes.
+     - Narrow down the scope by excluding the root volume or data volumes.
 
   4. **Set custom schedules**
-        - Automate the creation, retention, and deletion of EBS snapshots with custom schedules.
+     - Automate the creation, retention, and deletion of EBS snapshots with custom schedules.
 
   5. **Apply additional actions**
-        - Before finalizing the policy, you can configure tags, snapshot archiving, Amazon EBS fast snapshot restore, cross-Region copying, and cross-account sharing.
-
+     - Before finalizing the policy, you can configure tags, snapshot archiving, Amazon EBS fast snapshot restore, cross-Region copying, and cross-account sharing.
 
 ---
-
 
 ## Amazon Simple Storage Service (Amazon S3)
 
@@ -237,7 +228,6 @@
 - Buckets are created in a specific **AWS Region** and have **globally unique names**.
 
 - **Key takeaway**: Amazon S3 is ideal for storing large amounts of unstructured data such as images, videos, backups, logs, and static website content.
-
 
 #### Core concepts
 
@@ -256,7 +246,6 @@
    - A bucket belongs to one Region, but its name must be unique across all AWS accounts globally.
    - Buckets can contain a virtually unlimited number of objects.
 
-
 #### Important S3 features
 
 1. **Versioning**
@@ -274,7 +263,6 @@
 4. **Static website hosting**
    - Amazon S3 can host static websites made of HTML, CSS, JavaScript, images, and other static files.
 
-
 #### Benefits of Amazon S3
 
 1. **Virtually unlimited scalability**
@@ -288,7 +276,6 @@
 
 4. **Broad use cases**
    - Common use cases include backups, archives, media storage, log storage, data lakes, disaster recovery, and static website hosting.
-
 
 ### Amazon S3 security
 
@@ -323,7 +310,6 @@
 - Individual objects can be as large as **5 TB**.
 - Buckets can contain a virtually unlimited number of objects.
 - S3 Block Public Access settings override bucket policies, preventing public access even when policies allow it.
-
 
 ---
 
@@ -375,7 +361,6 @@
    - Extends S3 object storage to on-premises AWS Outposts environments.
    - Useful when workloads must keep data local because of residency, compliance, or low-latency requirements.
 
-
 #### Quick way to think about S3 storage classes
 
 - **Frequently accessed**: S3 Standard
@@ -384,7 +369,6 @@
 - **Archive with instant retrieval**: S3 Glacier Instant Retrieval
 - **Archive with flexible retrieval times**: S3 Glacier Flexible Retrieval
 - **Lowest-cost long-term archive**: S3 Glacier Deep Archive
-
 
 ### S3 Lifecycle
 
@@ -400,30 +384,42 @@
 
 ![alt text](Images/amazon-s3-lifecycle-configuration.png)
 
-  1. **After 30 days**
+1. **After 30 days**
+
+
     - Move an object from S3 Standard to S3 Standard-IA.
 
-  2. **After 60 more days**
+2. **After 60 more days**
+
+
     - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
 
-  3. **After 365 days**
-    - Expire the object and permanently delete it.
+3. **After 365 days**
 
+
+    - Expire the object and permanently delete it.
 
 #### Benefits of S3 Lifecycle
 
-  1. **Cost savings**
+1. **Cost savings**
+
+
     - Automatically moves older data to cheaper storage classes.
 
-  2. **Less manual work**
+2. **Less manual work**
+
+
     - Reduces the need to manage storage transitions manually.
 
-  3. **Better data retention management**
+3. **Better data retention management**
+
+
     - Helps enforce deletion schedules for temporary or aging data.
 
-  4. **Improved operational consistency**
-    - Ensures storage policies are applied consistently across buckets and objects.
+4. **Improved operational consistency**
 
+
+    - Ensures storage policies are applied consistently across buckets and objects.
 
 ### Common exam reminders
 
@@ -452,7 +448,6 @@
   - Uses the Linux NFS protocol
   - Automatically scales as files are added and removed
 
-
 ### What is Amazon EFS?
 
 - Amazon EFS is a fully managed, serverless, elastic file storage service for AWS cloud services and on-premises resources.
@@ -463,26 +458,32 @@
 
 - **Key takeaway**: use Amazon EFS when multiple resources need shared, elastic file storage.
 
-
 #### Amazon EFS benefits
 
-  1. **Shared access**
+1. **Shared access**
+
+
     - Multiple instances can mount and use the same file system at the same time.
     - This makes EFS a strong fit for shared content, web farms, home directories, and distributed applications.
 
-  2. **Elastic storage**
+2. **Elastic storage**
+
+
     - Amazon EFS grows and shrinks automatically as files are added or removed.
     - You do not need to provision storage capacity in advance.
     - You pay only for the storage you use.
 
-  3. **High availability and durability**
+3. **High availability and durability**
+
+
     - **Regional** EFS file systems store data redundantly across multiple Availability Zones in the same Region.
     - This helps keep data available even if one Availability Zone becomes unavailable.
 
-  4. **Managed service**
+4. **Managed service**
+
+
     - AWS manages the underlying file storage infrastructure for you.
     - You do not need to deploy, patch, or maintain file servers.
-
 
 ### Amazon EFS file system types and storage classes
 
@@ -491,34 +492,41 @@
   - **File system types** define availability and resiliency.
   - **Storage classes** define access pattern, performance, and cost.
 
-
 #### EFS file system types
 
-  1. **Regional**
+1. **Regional**
+
+
     - Recommended option for most workloads.
     - Stores data redundantly across multiple Availability Zones in the same Region.
     - Best for data that needs the highest availability and resilience.
 
-  2. **One Zone**
+2. **One Zone**
+
+
     - Stores data in a single Availability Zone.
     - Lower cost than Regional EFS, but less resilient.
     - Best for workloads that can tolerate reduced availability or where data can be recreated.
 
-
 #### EFS storage classes
 
-  1. **EFS Standard**
+1. **EFS Standard**
+
+
     - For active data that needs the lowest latency.
     - New data is written here first.
 
-  2. **EFS Infrequent Access (IA)**
+2. **EFS Infrequent Access (IA)**
+
+
     - Cost-optimized for data accessed only a few times each quarter.
     - Good for less frequently used files.
 
-  3. **EFS Archive**
+3. **EFS Archive**
+
+
     - Lowest-cost EFS storage class for data accessed only a few times each year or less.
     - Best for cold file data that does not need the lowest latency.
-
 
 ### Amazon EFS data lifecycle
 
@@ -547,9 +555,7 @@
 - EFS can automatically move older data to **IA** or **Archive** using lifecycle policies.
 - EFS automatically scales, while EBS capacity is provisioned manually.
 
-
 ---
-
 
 ## Amazon FSx
 
@@ -564,7 +570,6 @@
 
 - **Key takeaway**: use Amazon FSx when your workload needs a specific file system, protocol, or enterprise feature set that Amazon EFS does not provide.
 
-
 ### Amazon EFS vs Amazon FSx
 
 - **Amazon EFS**
@@ -577,21 +582,27 @@
   - Supports multiple protocols and specialized feature sets
   - Best when you need Windows, Lustre, OpenZFS, or NetApp ONTAP capabilities
 
-
 ### Benefits of Amazon FSx
 
-  1. **File system compatibility**
+1. **File system compatibility**
+
+
     - Amazon FSx supports widely used file systems and protocols, making it easier to migrate existing applications without major changes.
 
-  2. **Managed infrastructure**
+2. **Managed infrastructure**
+
+
     - AWS manages deployment, patching, hardware replacement, and backups.
 
-  3. **High performance**
+3. **High performance**
+
+
     - Amazon FSx is designed for demanding workloads that need low latency, high throughput, or specialized file system features.
 
-  4. **Data protection and availability**
-    - Depending on the FSx family, you can use features such as Multi-AZ deployments, backups, snapshots, replication, and encryption.
+4. **Data protection and availability**
 
+
+    - Depending on the FSx family, you can use features such as Multi-AZ deployments, backups, snapshots, replication, and encryption.
 
 ### Amazon FSx file system families
 
@@ -654,21 +665,27 @@
 
 - **Key takeaway**: AWS Storage Gateway helps extend on-premises storage into AWS without forcing you to rewrite existing applications or workflows.
 
-
 ### Benefits of AWS Storage Gateway
 
-  1. **Seamless integration**
+1. **Seamless integration**
+
+
     - It connects existing on-premises applications to AWS storage using familiar interfaces and protocols.
 
-  2. **Local caching**
+2. **Local caching**
+
+
     - Frequently accessed data can be cached locally for faster access.
 
-  3. **Centralized hybrid storage**
+3. **Centralized hybrid storage**
+
+
     - It simplifies storage management across on-premises infrastructure and AWS.
 
-  4. **Cost optimization**
-    - It reduces the need for large on-premises storage investments by using AWS for backup, archive, and disaster recovery.
+4. **Cost optimization**
 
+
+    - It reduces the need for large on-premises storage investments by using AWS for backup, archive, and disaster recovery.
 
 ### Main gateway types
 
@@ -698,7 +715,6 @@
      - Long-term archive
      - Disaster recovery
 
-
 ### Additional note
 
 - Current AWS documentation also includes **Amazon FSx File Gateway**.
@@ -712,9 +728,7 @@
 - **Tape Gateway** is for replacing physical tape backups with virtual tapes in AWS.
 - Storage Gateway is useful for backups, archives, disaster recovery, and extending on-premises storage into the cloud.
 
-
 ---
-
 
 ## AWS Elastic Disaster Recovery
 
@@ -726,33 +740,30 @@
 
 - **Key takeaway**: AWS Elastic Disaster Recovery is for recovering servers and applications quickly after an outage without maintaining a full secondary data center.
 
-
 ### Benefits of AWS Elastic Disaster Recovery
 
-  1. **Business resilience**
-      - Helps keep critical applications recoverable with continuous replication and fast recovery.
+1. **Business resilience**
+   - Helps keep critical applications recoverable with continuous replication and fast recovery.
 
-  2. **Non-disruptive testing**
-      - You can run disaster recovery drills without interrupting production systems.
+2. **Non-disruptive testing**
+   - You can run disaster recovery drills without interrupting production systems.
 
-  3. **Cost optimization**
-       - Uses affordable storage and minimal compute during normal operation, which reduces the cost of standby infrastructure.
+3. **Cost optimization**
+   - Uses affordable storage and minimal compute during normal operation, which reduces the cost of standby infrastructure.
 
-  4. **Streamlined recovery**
-      - Recovery settings, replication, drills, and failback can be managed from the AWS console.
-
+4. **Streamlined recovery**
+   - Recovery settings, replication, drills, and failback can be managed from the AWS console.
 
 ### Typical use cases
 
-  1. **Healthcare data protection**
-      - Protect patient record systems and keep critical healthcare applications recoverable during outages.
+1. **Healthcare data protection**
+   - Protect patient record systems and keep critical healthcare applications recoverable during outages.
 
-  2. **Financial services continuity**
-      - Replicate core banking or transaction systems so they can be recovered quickly if the primary environment fails.
+2. **Financial services continuity**
+   - Replicate core banking or transaction systems so they can be recovered quickly if the primary environment fails.
 
-  3. **Manufacturing operations recovery**
-     - Protect factory planning and supply chain systems to reduce disruption during disasters.
-
+3. **Manufacturing operations recovery**
+   - Protect factory planning and supply chain systems to reduce disruption during disasters.
 
 ### Common exam reminders
 
@@ -761,12 +772,9 @@
 - It supports **drills**, **point-in-time recovery**, and **failback**.
 - It helps replace the need for a costly secondary disaster recovery site.
 
-
 ---
 
-
 ## AWS Storage Services - Real-Life Use Cases
-
 
 ### Amazon S3 example
 
@@ -776,7 +784,6 @@
   - Amazon S3 scales automatically for traffic spikes.
   - There is no server management.
   - It is cost-effective for static content such as HTML, CSS, JavaScript, images, and videos.
-
 
 ### Amazon EBS example
 
@@ -789,7 +796,6 @@
   - Amazon S3 is object storage.
   - It is not designed for block-level database transactions or frequent low-latency updates.
 
-
 ### Amazon EFS example
 
 - **Scenario**: an automotive repair business needs shared access to images, videos, diagrams, and repair procedures.
@@ -798,33 +804,30 @@
   - Amazon EFS automatically scales as the dataset grows.
   - It is well suited for collaborative applications that need shared file storage.
 
-
 ### Quick comparison: S3 vs EBS vs EFS
 
-| Feature | Amazon S3 | Amazon EBS | Amazon EFS |
-| --- | --- | --- | --- |
-| Storage type | Object | Block | File |
-| Data access | Objects | Blocks | Files |
-| Attach to EC2 | No | Yes | Yes |
-| Shared by multiple EC2 instances | No | No | Yes |
-| Automatic scaling | Yes | No | Yes |
-| Best for | Static files, backups, media | EC2 storage, databases | Shared file storage |
-| Static website hosting | Yes | No | No |
-
+| Feature                          | Amazon S3                    | Amazon EBS             | Amazon EFS          |
+| -------------------------------- | ---------------------------- | ---------------------- | ------------------- |
+| Storage type                     | Object                       | Block                  | File                |
+| Data access                      | Objects                      | Blocks                 | Files               |
+| Attach to EC2                    | No                           | Yes                    | Yes                 |
+| Shared by multiple EC2 instances | No                           | No                     | Yes                 |
+| Automatic scaling                | Yes                          | No                     | Yes                 |
+| Best for                         | Static files, backups, media | EC2 storage, databases | Shared file storage |
+| Static website hosting           | Yes                          | No                     | No                  |
 
 ### Which service should you choose?
 
-| Requirement | AWS service |
-| --- | --- |
-| Static website hosting | Amazon S3 |
-| Images, videos, and backups | Amazon S3 |
-| Storage for an EC2 instance | Amazon EBS |
-| Relational database storage | Amazon EBS |
-| High-performance database storage | Amazon EBS with Provisioned IOPS SSD |
-| Shared file system | Amazon EFS |
-| Multiple EC2 instances need the same files | Amazon EFS |
-| Collaborative applications | Amazon EFS |
-
+| Requirement                                | AWS service                          |
+| ------------------------------------------ | ------------------------------------ |
+| Static website hosting                     | Amazon S3                            |
+| Images, videos, and backups                | Amazon S3                            |
+| Storage for an EC2 instance                | Amazon EBS                           |
+| Relational database storage                | Amazon EBS                           |
+| High-performance database storage          | Amazon EBS with Provisioned IOPS SSD |
+| Shared file system                         | Amazon EFS                           |
+| Multiple EC2 instances need the same files | Amazon EFS                           |
+| Collaborative applications                 | Amazon EFS                           |
 
 ### AWS exam memory trick
 

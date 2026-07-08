@@ -2,16 +2,15 @@
 
 IAM is a **global AWS service** used to manage users and permissions.
 
-* **Important Points**
-
-    - Root account is created by default.
-    - Root account **should not be used for daily tasks**.
-    - Users and groups are assigned **JSON policies**.
-    - Policies define **permissions**.
+- **Important Points**
+  - Root account is created by default.
+  - Root account **should not be used for daily tasks**.
+  - Users and groups are assigned **JSON policies**.
+  - Policies define **permissions**.
 
 AWS follows the **Least Privilege Principle**:
-> Give users only the permissions they need.
 
+> Give users only the permissions they need.
 
 ### IAM Policy Document Structure
 
@@ -38,7 +37,7 @@ AWS follows the **Least Privilege Principle**:
 #### Policy Elements
 
 | Field     | Description                      |
-|-----------|----------------------------------|
+| --------- | -------------------------------- |
 | Version   | Policy language version          |
 | Id        | Policy identifier                |
 | Statement | Defines permissions              |
@@ -47,35 +46,31 @@ AWS follows the **Least Privilege Principle**:
 | Action    | AWS service actions              |
 | Resource  | Resources affected by the policy |
 
-
 ### IAM Password Policy
 
 Strong password policies improve security.
 
 - **Configuration Options**
-    - Minimum password length
-    - Required character types
-    - Allow users to change their password
-    - Password expiration
-    - Prevent password reuse
-
+  - Minimum password length
+  - Required character types
+  - Allow users to change their password
+  - Password expiration
+  - Prevent password reuse
 
 ### Multi-Factor Authentication (MFA)
 
 - **MFA requires**:
-    - Password
-    - Security device
+  - Password
+  - Security device
 
 - **MFA Device Options**:
-    - Virtual MFA (Google Authenticator)
-    - U2F Security Key (Yubikey)
-    - Hardware Key Fob
-
+  - Virtual MFA (Google Authenticator)
+  - U2F Security Key (Yubikey)
+  - Hardware Key Fob
 
 ### AWS GovCloud (US)
 
 A special AWS region designed for **US government workloads requiring strict compliance**.
-
 
 ### How Users Access AWS
 
@@ -85,11 +80,9 @@ A special AWS region designed for **US government workloads requiring strict com
 
 Authentication for CLI and SDK uses **Access Keys**.
 
-
 ### AWS CLI / AWS CloudShell
 
 Used to **manage AWS services from the command line**.
-
 
 ## IAM Roles
 
@@ -99,22 +92,19 @@ Example:
 
 - EC2 accessing S3
 
-
-
 ### IAM Security Tools
 
 1. IAM Credentials Report
-    - Account-level report listing:
-        - Users
-        - Password status
-        - Access keys
-        - MFA usage
+   - Account-level report listing:
+     - Users
+     - Password status
+     - Access keys
+     - MFA usage
 
 2. IAM Access Advisor / Last Accessed
-    - Shows:
-        - When a user last accessed a service
-        - Which services were used
-
+   - Shows:
+     - When a user last accessed a service
+     - Which services were used
 
 ### IAM Best Practices
 
