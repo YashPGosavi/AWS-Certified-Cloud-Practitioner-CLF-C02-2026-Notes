@@ -23,19 +23,20 @@
 
 ### AWS AI/ML stack
 
-1. **AI services**
+- **AI services**
    - Pre-built, fully managed services that are already trained for specific tasks.
 
-2. **ML services**
+- **ML services**
    - More customizable services where you build, train, and deploy your own models.
    - The main service here is **Amazon SageMaker AI**.
 
-3. **ML frameworks and infrastructure**
+- **ML frameworks and infrastructure**
    - The most custom option for experienced ML teams.
    - Uses ML frameworks and AWS infrastructure to build solutions from the ground up.
 
 
 ---
+
 
 ## AWS AI/ML Solutions
 

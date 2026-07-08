@@ -1,6 +1,4 @@
-#
-
-## IAM (Identity and Access Management)
+# IAM (Identity and Access Management)
 
 IAM is a **global AWS service** used to manage users and permissions.
 
@@ -49,7 +47,6 @@ AWS follows the **Least Privilege Principle**:
 | Action    | AWS service actions              |
 | Resource  | Resources affected by the policy |
 
----
 
 ### IAM Password Policy
 
@@ -61,6 +58,7 @@ Strong password policies improve security.
     - Allow users to change their password
     - Password expiration
     - Prevent password reuse
+
 
 ### Multi-Factor Authentication (MFA)
 

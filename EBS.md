@@ -39,6 +39,8 @@
 - Recycle Bin for EBS Snapshots: set rules to retain deleted snapshots so they can be recovered after accidental deletion.
 - Retention can be configured from 1 day up to 1 year.
 
+---
+
 ## AMI overview
 
 - AMI stands for Amazon Machine Image.
