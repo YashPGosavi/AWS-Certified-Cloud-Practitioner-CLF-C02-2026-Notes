@@ -57,7 +57,7 @@ AWS provides several security mechanisms to help protect cloud resources by:
 - When you assign permissions, follow the **principle of least privilege**: give users and systems only the access they need and nothing more.
 - IAM provides identities such as users, groups, and roles, and uses policies to define access. This allows you to control permissions based on your organization’s security and operational needs.
 
-**Refer [IMA-Detail](<IAM (Identity and Access Management).md>)**
+**Refer [IMA-Detail](<iam-identity-and-access-management.md>)**
 
 ### IAM identities and controls
 
