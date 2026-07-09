@@ -39,6 +39,7 @@
 6. perfect for event driven architecture
 
 #### How Lambda works
+
 `Lambda Function -> Triggers -> Runtime`
 
 1. Upload code to lambda
@@ -198,3 +199,5 @@ Easy memory trick: Orchestration = Auto-manage containers
 2. AWS Batch runs large-scale batch computing workloads.
 3. Amazon Lightsail offers simplified VPS, storage, and networking.
 4. AWS Outposts extends AWS services to on-premises environments.
+
+---

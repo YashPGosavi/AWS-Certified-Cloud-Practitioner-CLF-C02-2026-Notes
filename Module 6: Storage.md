@@ -385,34 +385,27 @@
 ![alt text](Images/amazon-s3-lifecycle-configuration.png)
 
 1. **After 30 days**
-
-    - Move an object from S3 Standard to S3 Standard-IA.
+   - Move an object from S3 Standard to S3 Standard-IA.
 
 2. **After 60 more days**
-
-    - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
+   - Move the object from S3 Standard-IA to S3 Glacier Instant Retrieval.
 
 3. **After 365 days**
-
-    - Expire the object and permanently delete it.
+   - Expire the object and permanently delete it.
 
 #### Benefits of S3 Lifecycle
 
 1. **Cost savings**
-
-    - Automatically moves older data to cheaper storage classes.
+   - Automatically moves older data to cheaper storage classes.
 
 2. **Less manual work**
-
-    - Reduces the need to manage storage transitions manually.
+   - Reduces the need to manage storage transitions manually.
 
 3. **Better data retention management**
-
-    - Helps enforce deletion schedules for temporary or aging data.
+   - Helps enforce deletion schedules for temporary or aging data.
 
 4. **Improved operational consistency**
-
-    - Ensures storage policies are applied consistently across buckets and objects.
+   - Ensures storage policies are applied consistently across buckets and objects.
 
 ### Common exam reminders
 
@@ -454,25 +447,21 @@
 #### Amazon EFS benefits
 
 1. **Shared access**
-
-    - Multiple instances can mount and use the same file system at the same time.
-    - This makes EFS a strong fit for shared content, web farms, home directories, and distributed applications.
+   - Multiple instances can mount and use the same file system at the same time.
+   - This makes EFS a strong fit for shared content, web farms, home directories, and distributed applications.
 
 2. **Elastic storage**
-
-    - Amazon EFS grows and shrinks automatically as files are added or removed.
-    - You do not need to provision storage capacity in advance.
-    - You pay only for the storage you use.
+   - Amazon EFS grows and shrinks automatically as files are added or removed.
+   - You do not need to provision storage capacity in advance.
+   - You pay only for the storage you use.
 
 3. **High availability and durability**
-
-    - **Regional** EFS file systems store data redundantly across multiple Availability Zones in the same Region.
-    - This helps keep data available even if one Availability Zone becomes unavailable.
+   - **Regional** EFS file systems store data redundantly across multiple Availability Zones in the same Region.
+   - This helps keep data available even if one Availability Zone becomes unavailable.
 
 4. **Managed service**
-
-    - AWS manages the underlying file storage infrastructure for you.
-    - You do not need to deploy, patch, or maintain file servers.
+   - AWS manages the underlying file storage infrastructure for you.
+   - You do not need to deploy, patch, or maintain file servers.
 
 ### Amazon EFS file system types and storage classes
 
@@ -484,33 +473,28 @@
 #### EFS file system types
 
 1. **Regional**
-
-    - Recommended option for most workloads.
-    - Stores data redundantly across multiple Availability Zones in the same Region.
-    - Best for data that needs the highest availability and resilience.
+   - Recommended option for most workloads.
+   - Stores data redundantly across multiple Availability Zones in the same Region.
+   - Best for data that needs the highest availability and resilience.
 
 2. **One Zone**
-
-    - Stores data in a single Availability Zone.
-    - Lower cost than Regional EFS, but less resilient.
-    - Best for workloads that can tolerate reduced availability or where data can be recreated.
+   - Stores data in a single Availability Zone.
+   - Lower cost than Regional EFS, but less resilient.
+   - Best for workloads that can tolerate reduced availability or where data can be recreated.
 
 #### EFS storage classes
 
 1. **EFS Standard**
-
-    - For active data that needs the lowest latency.
-    - New data is written here first.
+   - For active data that needs the lowest latency.
+   - New data is written here first.
 
 2. **EFS Infrequent Access (IA)**
-
-    - Cost-optimized for data accessed only a few times each quarter.
-    - Good for less frequently used files.
+   - Cost-optimized for data accessed only a few times each quarter.
+   - Good for less frequently used files.
 
 3. **EFS Archive**
-
-    - Lowest-cost EFS storage class for data accessed only a few times each year or less.
-    - Best for cold file data that does not need the lowest latency.
+   - Lowest-cost EFS storage class for data accessed only a few times each year or less.
+   - Best for cold file data that does not need the lowest latency.
 
 ### Amazon EFS data lifecycle
 
@@ -569,20 +553,16 @@
 ### Benefits of Amazon FSx
 
 1. **File system compatibility**
-
-    - Amazon FSx supports widely used file systems and protocols, making it easier to migrate existing applications without major changes.
+   - Amazon FSx supports widely used file systems and protocols, making it easier to migrate existing applications without major changes.
 
 2. **Managed infrastructure**
-
-    - AWS manages deployment, patching, hardware replacement, and backups.
+   - AWS manages deployment, patching, hardware replacement, and backups.
 
 3. **High performance**
-
-    - Amazon FSx is designed for demanding workloads that need low latency, high throughput, or specialized file system features.
+   - Amazon FSx is designed for demanding workloads that need low latency, high throughput, or specialized file system features.
 
 4. **Data protection and availability**
-
-    - Depending on the FSx family, you can use features such as Multi-AZ deployments, backups, snapshots, replication, and encryption.
+   - Depending on the FSx family, you can use features such as Multi-AZ deployments, backups, snapshots, replication, and encryption.
 
 ### Amazon FSx file system families
 
@@ -648,20 +628,16 @@
 ### Benefits of AWS Storage Gateway
 
 1. **Seamless integration**
-
-    - It connects existing on-premises applications to AWS storage using familiar interfaces and protocols.
+   - It connects existing on-premises applications to AWS storage using familiar interfaces and protocols.
 
 2. **Local caching**
-
-    - Frequently accessed data can be cached locally for faster access.
+   - Frequently accessed data can be cached locally for faster access.
 
 3. **Centralized hybrid storage**
-
-    - It simplifies storage management across on-premises infrastructure and AWS.
+   - It simplifies storage management across on-premises infrastructure and AWS.
 
 4. **Cost optimization**
-
-    - It reduces the need for large on-premises storage investments by using AWS for backup, archive, and disaster recovery.
+   - It reduces the need for large on-premises storage investments by using AWS for backup, archive, and disaster recovery.
 
 ### Main gateway types
 
