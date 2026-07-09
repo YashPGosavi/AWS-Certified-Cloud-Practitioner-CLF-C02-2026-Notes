@@ -60,32 +60,26 @@ compute needs. The cost is affected by:
 
 ## AWS Pricing and Billing Services
 
-AWS provides several tools to help you plan, track, and manage costs.
+- AWS provides several tools to help you plan, track, and manage costs.
+  1.  **AWS Organizations**
+      - Centralizes billing and account management for multiple AWS accounts.
+      - Helps apply organization-wide policies and simplify governance.
 
-### AWS Organizations
+  2.  **AWS Billing and Cost Management dashboard**
+      - Shows current charges, usage, forecasts, and cost breakdowns.
+      - Helps you manage payment methods, invoices, and billing details.
 
-- Centralizes billing and account management for multiple AWS accounts.
-- Helps apply organization-wide policies and simplify governance.
+  3.  **AWS Budgets**
+      - Lets you set spending thresholds and receive alerts.
+      - Useful for avoiding unexpected cost increases.
 
-### AWS Billing and Cost Management dashboard
+  4.  **AWS Cost Explorer**
+      - Provides charts and reports to analyze historical spending.
+      - Helps identify trends and cost-saving opportunities.
 
-- Shows current charges, usage, forecasts, and cost breakdowns.
-- Helps you manage payment methods, invoices, and billing details.
-
-### AWS Budgets
-
-- Lets you set spending thresholds and receive alerts.
-- Useful for avoiding unexpected cost increases.
-
-### AWS Cost Explorer
-
-- Provides charts and reports to analyze historical spending.
-- Helps identify trends and cost-saving opportunities.
-
-### AWS Pricing Calculator
-
-- Allows you to estimate costs before deploying resources.
-- Useful for comparing different configurations and services.
+  5.  **AWS Pricing Calculator**
+      - Allows you to estimate costs before deploying resources.
+      - Useful for comparing different configurations and services.
 
 ### Key takeaway / summary
 
@@ -142,25 +136,22 @@ support.
 
 ### AWS Marketplace
 
-The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps
-customers find, test, and buy software that runs on AWS.
+- The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps
+  customers find, test, and buy software that runs on AWS.
 
-Common categories include:
-
-- **Software as a Service (SaaS)**: business apps, collaboration tools, and marketing platforms.
-- **Machine learning and AI**: prebuilt models and ML tools.
-- **Data and analytics**: BI tools, reporting platforms, and integration services.
+- **Common categories include**:
+  - **Software as a Service (SaaS)**: business apps, collaboration tools, and marketing platforms.
+  - **Machine learning and AI**: prebuilt models and ML tools.
+  - **Data and analytics**: BI tools, reporting platforms, and integration services.
 
 ### AWS Partner Network (APN)
 
-The APN is a global community of partners that build solutions and services on AWS. Working with
-partners can help organizations solve technical problems and accelerate implementation.
-
-Benefits of becoming an AWS Partner include:
-
-- funding opportunities
-- partner events and training
-- access to AWS programs and certification resources
+- The APN is a global community of partners that build solutions and services on AWS. Working with
+  partners can help organizations solve technical problems and accelerate implementation.
+- **Benefits of becoming an AWS Partner include**:
+  - funding opportunities
+  - partner events and training
+  - access to AWS programs and certification resources
 
 ### Key takeaway / summary
 

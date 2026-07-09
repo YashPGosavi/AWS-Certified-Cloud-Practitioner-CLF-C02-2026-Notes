@@ -46,29 +46,31 @@
 #### Language services
 
 1. **Amazon Comprehend**
-   - Uses natural language processing to extract insights from text.
-   - Common use cases:
+   - Uses natural language processing to extract insights from text and document.
+   - It develops these insights by recognizing key phrases, language, sentiment, and other common elements in documents.
+   - **Common use cases**:
      - content classification
      - sentiment analysis
      - compliance monitoring
 
 2. **Amazon Polly**
    - Converts text into lifelike speech.
-   - Common use cases:
+   - It supports multiple languages, different genders, and a variety of accents.
+   - **Common use cases**:
      - virtual assistants
      - e-learning
      - accessibility support
 
 3. **Amazon Transcribe**
    - Converts speech into text.
-   - Common use cases:
+   - **Common use cases**:
      - call transcription
      - subtitling
      - media metadata generation
 
 4. **Amazon Translate**
    - Translates text across multiple languages.
-   - Common use cases:
+   - **Common use cases**:
      - document translation
      - multilingual applications
 
@@ -76,21 +78,21 @@
 
 1. **Amazon Kendra**
    - Search service that understands context and returns more relevant answers than keyword search.
-   - Common use cases:
+   - **Common use cases**:
      - intelligent search
      - chatbots
      - application search
 
 2. **Amazon Rekognition**
    - Analyzes images and videos to identify objects, people, text, scenes, and activities.
-   - Common use cases:
+   - **Common use cases**:
      - content moderation
      - identity verification
      - media analysis
 
 3. **Amazon Textract**
-   - Extracts text, forms, and tables from documents.
-   - Common use cases:
+   - Extracts typed and handwritten text, forms, and tables from documents.
+   - **Common use cases**:
      - financial forms
      - healthcare forms
      - government document processing
@@ -99,14 +101,15 @@
 
 1. **Amazon Lex**
    - Adds voice and text conversational interfaces to applications.
-   - Common use cases:
+   - This service uses both natural language understanding (NLU) and automatic speech recognition (ASR) to create lifelike conversations.
+   - **Common use cases**:
      - virtual assistants
      - FAQ bots
      - automated application bots
 
 2. **Amazon Personalize**
    - Uses historical data to generate personalized recommendations.
-   - Common use cases:
+   - **Common use cases**:
      - streaming recommendations
      - product recommendations
      - trending recommendations
@@ -118,7 +121,7 @@
 #### Amazon SageMaker AI
 
 - Amazon SageMaker AI is a fully managed service for building, training, and deploying ML models.
-- It provides tools for:
+- **It provides tools for**:
   - data exploration
   - model training
   - experiment tracking
@@ -126,16 +129,15 @@
   - monitoring
 - It also provides access to pre-trained models that you can deploy quickly.
 
-##### Key benefits of SageMaker AI
+- **Key benefits of SageMaker AI**
+  1.  **Choice of ML tools**
+      - Data scientists can use the IDE, while business users can use no-code options.
 
-1. **Choice of ML tools**
-   - Data scientists can use the IDE, while business users can use no-code options.
+  2.  **Fully managed infrastructure**
+      - AWS handles the infrastructure so teams can focus on model development.
 
-2. **Fully managed infrastructure**
-   - AWS handles the infrastructure so teams can focus on model development.
-
-3. **Repeatable ML workflows**
-   - Helps standardize MLOps practices, governance, transparency, and auditability.
+  3.  **Repeatable ML workflows**
+      - Helps standardize MLOps practices, governance, transparency, and auditability.
 
 ### Tier 3: ML frameworks and infrastructure
 
@@ -146,14 +148,14 @@
 
 1. **ML frameworks**
    - Software libraries or tools used to build ML models.
-   - Examples include:
+   - **Examples include**:
      - PyTorch
      - Apache MXNet
      - TensorFlow
 
 2. **AWS ML infrastructure**
    - Infrastructure used for advanced ML workloads.
-   - Examples include:
+   - **Examples include**:
      - ML-optimized Amazon EC2 instances
      - Amazon EMR
      - Amazon ECS
@@ -186,7 +188,7 @@ AWS offers these generative AI options:
 
 ## AWS Generative AI Solutions
 
-### Amazon SageMaker JumpStart
+1. **Amazon SageMaker JumpStart**
 
 - SageMaker JumpStart is a machine learning hub within SageMaker AI.
 - It provides pre-built solutions across areas like:
@@ -195,51 +197,48 @@ AWS offers these generative AI options:
   - tabular data
 - These models can be fine-tuned and deployed with a few clicks.
 
-#### Common use cases
+- **Common use cases**
+  1.  **Rapid ML model deployments**
+      - Quickly deploy pre-trained models without deep ML expertise.
 
-1. **Rapid ML model deployments**
-   - Quickly deploy pre-trained models without deep ML expertise.
+  2.  **Custom fine-tuned solutions**
+      - Fine-tune foundation models with your own domain data.
 
-2. **Custom fine-tuned solutions**
-   - Fine-tune foundation models with your own domain data.
+  3.  **ML experiments and prototypes**
+      - Compare different models before committing to one approach.
 
-3. **ML experiments and prototypes**
-   - Compare different models before committing to one approach.
+2. **Amazon Bedrock**
 
-### Amazon Bedrock
-
-- Amazon Bedrock is a fully managed service for building generative AI applications with foundation models.
+- Amazon Bedrock is a fully managed service for **building generative AI applications with foundation models**.
 - It gives access to models from Amazon and leading AI companies through a single API.
 - It supports experimentation, fine-tuning, and integration into AWS applications.
 
-#### Common use cases
+- **Common use cases**
+  1.  **Enterprise-grade generative AI**
+      - Build production-ready apps with security, privacy, and scalability.
 
-1. **Enterprise-grade generative AI**
-   - Build production-ready apps with security, privacy, and scalability.
+  2.  **Multimodal content generation**
+      - Generate multiple content types such as text and images.
 
-2. **Multimodal content generation**
-   - Generate multiple content types such as text and images.
+  3.  **Advanced conversational AI**
+      - Build assistants that can connect to enterprise data.
 
-3. **Advanced conversational AI**
-   - Build assistants that can connect to enterprise data.
+3. **Amazon Q products**
 
-### Amazon Q products
+- **Amazon Q is a generative AI assistant** designed to help employees work faster and make decisions sooner.
+  1.  **Amazon Q Business**
+      - Answers questions and helps take actions using company knowledge and connected systems.
+      - **Common use cases**:
+        - information requests
+        - automated workflows
+        - insight extraction
 
-- Amazon Q is a generative AI assistant designed to help employees work faster and make decisions sooner.
-
-1. **Amazon Q Business**
-   - Answers questions and helps take actions using company knowledge and connected systems.
-   - Common use cases:
-     - information requests
-     - automated workflows
-     - insight extraction
-
-2. **Amazon Q Developer**
-   - Gives code recommendations and helps developers write code faster.
-   - Common use cases:
-     - code generation
-     - reliability and security improvements
-     - automated code reviews
+  2.  **Amazon Q Developer**
+      - Gives code recommendations and helps developers write code faster.
+      - **Common use cases**:
+        - code generation
+        - reliability and security improvements
+        - automated code reviews
 
 ---
 
@@ -255,7 +254,7 @@ AWS offers these generative AI options:
 ### Data analytics
 
 - Data analytics is the process of transforming raw historical data into useful insights and trends.
-- Common use cases include:
+- **Common use cases** include:
   - explaining lending decisions
   - analyzing clinical trial data
   - supporting regulatory transparency
@@ -265,19 +264,23 @@ AWS offers these generative AI options:
 ## Data Pipelines on AWS
 
 - AWS provides services for each stage of a data pipeline.
+  1.  Data ingetion
+  2.  Data Storage
+  3.  Data cataloging
+  4.  Data processing
+  5.  Data analysis and visualization
 
 ### Data ingestion
 
 - Data ingestion moves data from source systems into storage.
 - Use **real-time ingestion** when data is needed immediately.
 - Use **batch ingestion** when some delay is acceptable.
+  1.  **Amazon Kinesis Data Streams**
+      - Real-time ingestion for applications, streams, and sensors.
 
-1. **Amazon Kinesis Data Streams**
-   - Real-time ingestion for applications, streams, and sensors.
-
-2. **Amazon Data Firehose**
-   - Near real-time, fully managed data delivery service.
-   - Delivers data to data lakes, warehouses, and analytics services.
+  2.  **Amazon Data Firehose**
+      - Near real-time, fully managed data delivery service.
+      - Delivers data to data lakes, warehouses, and analytics services.
 
 ### Data storage
 
@@ -285,31 +288,32 @@ AWS offers these generative AI options:
 - Common storage choices are:
   - **data lakes** for raw data
   - **data warehouses** for structured analytics
+  1.  **Amazon S3**
+      - Common choice for data lakes.
+      - Stores structured or unstructured data at scale.
 
-1. **Amazon S3**
-   - Common choice for data lakes.
-   - Stores structured or unstructured data at scale.
-
-2. **Amazon Redshift**
-   - Fully managed data warehouse for petabytes of structured or semi-structured data.
+  2.  **Amazon Redshift**
+      - Fully managed data warehouse for petabytes of structured or semi-structured data.
 
 ### Data cataloging
 
-1. **AWS Glue Data Catalog**
-   - Centralized metadata repository.
-   - Improves data discovery and helps analytics services understand data sources.
+- Cataloging your data with metadata provides an inventory of your organization's data.
+  1.  **AWS Glue Data Catalog**
+      - Centralized metadata repository.
+      - Improves data discovery and helps analytics services understand data sources.
 
 ### Data processing
 
-1. **AWS Glue**
-   - Fully managed ETL service for preparing and transforming data.
+- Data processing services clean and transform your data so it's ready to be analyzed.
+  1.  **AWS Glue**
+      - Fully managed ETL service for preparing and transforming data.
 
-2. **Amazon EMR**
-   - Managed big data processing service for large-scale analytics workloads.
-   - Supports frameworks like:
-     - Apache Spark
-     - Apache Hadoop
-     - Apache Hive
+  2.  **Amazon EMR**
+      - Managed big data processing service for large-scale analytics workloads.
+      - **Supports frameworks like**:
+        - Apache Spark
+        - Apache Hadoop
+        - Apache Hive
 
 ### Data analysis and visualization
 
@@ -325,13 +329,14 @@ AWS offers these generative AI options:
 
 4. **Amazon OpenSearch Service**
    - Search and analytics service for logs, traces, metrics, and content discovery.
+   - OpenSearch Service to visualize data in a data pipeline.
 
 ---
 
 ## Data Analytics and AI/ML
 
 - A common AWS pattern is to use one data pipeline for both analytics and ML training.
-- The flow is:
+- **The flow is**:
   1. capture application data
   2. ingest and transform it
   3. store it in S3
@@ -340,6 +345,8 @@ AWS offers these generative AI options:
   6. train ML models with SageMaker AI
 
 ### Example workflow
+
+![alt text](Images/data-analytics–and-ai-ml-architecture-diagram.png)
 
 1. **Make recommendations**
    - An e-commerce ML model generates product recommendations.
