@@ -19,7 +19,7 @@ costs, what support options are available, and how to reduce unnecessary spendin
 AWS uses a pay-as-you-go model for most services. This means you pay only for the resources you use,
 for as long as you use them, without long-term commitments or complex licensing.
 
-### Core pricing concepts
+### Core pricing concepts in AWS
 
 1. **Pay as you go**
    - You can scale resources up or down based on demand.
@@ -34,20 +34,18 @@ for as long as you use them, without long-term commitments or complex licensing.
 
 ### Main drivers of AWS cost
 
-AWS costs are influenced by three major factors:
-
-- **Compute**: You pay for processing time, often by the hour or second.
-- **Storage**: Cost depends on how much data you store and how it is accessed.
-- **Data transfer**: Outbound data transfer is typically charged, while inbound transfer is usually free.
+- AWS costs are influenced by three major factors:
+  1.  **Compute**: You pay for processing time, often by the hour or second.
+  2.  **Storage**: Cost depends on how much data you store and how it is accessed.
+  3.  **Data transfer**: Outbound data transfer is typically charged, while inbound transfer is usually free.
 
 ### Example: Amazon EC2 scenario
 
-An organization running an online donation application might choose an EC2 instance based on its
-compute needs. The cost is affected by:
-
-- **Compute**: The instance type and size, such as a low-cost t4g.nano instance.
-- **Storage**: The amount of EBS storage attached to the instance.
-- **Data transfer**: Outbound traffic sent to another service for analytics.
+- An organization running an online donation application might choose an EC2 instance based on its
+  compute needs. The cost is affected by:
+  1.  **Compute**: The instance type and size, such as a low-cost t4g.nano instance.
+  2.  **Storage**: The amount of EBS storage attached to the instance.
+  3.  **Data transfer/Outbound Data Transfer**: Outbound traffic sent to another service for analytics.
 
 ![alt text](Images/aws-pricing-scenario.png)
 
@@ -115,15 +113,26 @@ support.
   - Best for mission-critical workloads.
   - Includes the highest level of support and a designated technical account manager.
 
+| Feature                             | Basic Support                                                     | Developer Support                                                 | Business Support                                                                                                     | Enterprise On-Ramp Support                                                            | Enterprise Support                                                                                |
+| ----------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Recommended For**                 | Included for all AWS customers                                    | Experimenting or testing in AWS                                   | Minimum recommended tier for production workloads                                                                    | Production and business-critical workloads                                            | Business-critical and mission-critical workloads                                                  |
+| **Documentation & AWS re:Post**     | ✅ Includes access to documentation, whitepapers, and AWS re:Post | ✅ Includes access to documentation, whitepapers, and AWS re:Post | ✅ Includes access to documentation, whitepapers, and AWS re:Post                                                    | ✅ Includes access to documentation, whitepapers, and AWS re:Post                     | ✅ Includes access to documentation, whitepapers, and AWS re:Post                                 |
+| **Response Times**                  | Not included                                                      | < 24 hours (general guidance)<br>< 12 hours (systems impaired)    | Includes previous plan response times<br>< 4 hours (production system impaired)<br>< 1 hour (production system down) | Includes previous plan response times<br>< 30 minutes (business-critical system down) | Includes previous plan response times<br>< 15 minutes (business- or mission-critical system down) |
+| **AWS Trusted Advisor**             | Core checks                                                       | Core checks                                                       | Full set of checks                                                                                                   | Full set of checks                                                                    | Full set of checks + prioritized recommendations by AWS account team                              |
+| **Technical Account Manager (TAM)** | ❌ Not included                                                   | ❌ Not included                                                   | ❌ Not included                                                                                                      | Pool of Technical Account Managers (TAMs) provide proactive guidance                  | Designated TAM provides consultative architectural and operational guidance                       |
+
 > Note: In the course materials, Developer, Business, and Enterprise On-Ramp support plans are noted as being discontinued on January 1, 2027.
 
 ### Additional support resources
 
-- **AWS re:Post**: A community Q&A platform for AWS questions and solutions.
-- **AWS Trust and Safety Center**: Helps report suspicious or abusive activity.
-- **AWS Solutions Architects**: Provide architectural guidance for Business and Enterprise customers.
-- **AWS Professional Services**: Offers deeper consulting support for complex projects.
-- **AWS documentation**: A large self-service library for troubleshooting and learning.
+- **Self-Support**
+  - **AWS re:Post**: A community Q&A platform for AWS questions and solutions.
+  - **AWS documentation**: A large self-service library for troubleshooting and learning.
+
+- **Other Support**
+  - **AWS Trust and Safety Center**: Helps report suspicious or abusive activity.
+  - **AWS Solutions Architects**: Provide architectural guidance for Business and Enterprise customers.
+  - **AWS Professional Services**: Offers deeper consulting support for complex projects.
 
 ### Key takeaway / summary
 
@@ -136,7 +145,7 @@ support.
 
 ### AWS Marketplace
 
-- The AWS Marketplace is a digital catalog of software solutions from independent vendors. It helps
+- The AWS Marketplace is a digital catalog of software solutions from independent vendors/ 3rd party softwares. It helps
   customers find, test, and buy software that runs on AWS.
 
 - **Common categories include**:
@@ -166,6 +175,8 @@ Cost optimization is about using the right resources, at the right size, and for
 
 ### Common cost optimization strategies
 
+![alt text](Images/cost-optimization.png)
+
 1. **Amazon EC2**
    - Rightsize instances to match workload needs.
    - Use Spot Instances for flexible, interruption-tolerant workloads.
@@ -184,8 +195,6 @@ Cost optimization is about using the right resources, at the right size, and for
    - Use S3 Glacier Deep Archive for rarely accessed data.
    - Use S3 Intelligent-Tiering for workloads with changing access patterns.
    - Use VPC endpoints to reduce data transfer costs.
-
-![alt text](Images/cost-optimization.png)
 
 ### Key takeaway / summary
 

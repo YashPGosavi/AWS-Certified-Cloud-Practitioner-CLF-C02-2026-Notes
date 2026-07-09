@@ -1,4 +1,4 @@
-### EBS volume basics
+## EBS volume basics
 
 - An EBS volume is a network drive you can attach to an instance while it is running.
 - It allows your instance to persist data even after termination.
@@ -60,6 +60,8 @@
 3. Create an AMI; this also creates EBS snapshots.
 4. Launch instances from the new AMI.
 
+---
+
 ## EC2 Image Builder
 
 - Used to automate the creation of virtual machines or container images.
@@ -81,3 +83,5 @@
 - It is good for buffers, caches, scratch data, and temporary content.
 - There is a risk of data loss if hardware fails.
 - Backups and replication are your responsibility.
+
+---
