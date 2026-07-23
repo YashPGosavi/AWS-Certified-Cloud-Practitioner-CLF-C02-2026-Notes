@@ -42,18 +42,18 @@ A **server** is a computer that provides services to other computers.
 
 ### Cloud Deployment Models
 
-1. Private Cloud (On-Premises Cloud)
+1. **Private Cloud (On-Premises Cloud)**
    - Infrastructure dedicated to a single organization.
 
-2. Public Cloud
+2. **Public Cloud**
    - Cloud services provided over the internet by third-party providers.
-   - Examples:
+   - **Examples:**
      - Google Cloud
      - Microsoft Azure
      - AWS
 
-3. Hybrid Cloud
-   - Combination of **private cloud and public cloud**.
+3. **Hybrid Cloud**
+   - Combination of **private cloud** and **public cloud**.
    - In a hybrid deployment, cloud-based resources and on-premises infrastructure work together. This approach is ideal for situations where legacy applications must remain on premises due to maintenance preferences or regulatory requirements.
 
 ### Characteristics of Cloud Computing
@@ -88,22 +88,22 @@ A **server** is a computer that provides services to other computers.
 
 ### AWS Global Infrastructure
 
-- **AWS Regions**
-  - A **region** is a geographic area containing multiple data centers.
+1. **AWS Regions**
+    - A **region** is a geographic area containing multiple data centers.
 
-  - AWS Regions are physical locations around the world that contain groups of data centers. These groups of data centers are called Availability Zones. Each AWS Region consists of a minimum of three physically separate Availability Zones within a geographic area.
+    - **AWS Regions are physical locations around the world that contain groups of data centers**. 
+      - **These groups of data centers are called Availability Zones**. An Availability Zone is a distinct location within a Region that contains one or more discrete data centers.
+      - **Each AWS Region consists of a minimum of three physically separate Availability Zones within a geographic area**.
 
-  - A Region is a geographical location that contains three or more Availability Zones. An Availability Zone is a distinct location within a Region that contains one or more discrete data centers.
+2. **Availability Zones (AZ)**
+    - Availability Zones are **isolated data centers within a region** with:
+      - Redundant power
+      - Networking
+      - Connectivity
 
-- **Availability Zones (AZ)**
-  - Availability Zones are **isolated data centers within a region** with:
-    - Redundant power
-    - Networking
-    - Connectivity
+    - Used to deploy **highly available infrastructure**.
 
-  - Used to deploy **highly available infrastructure**.
-
-  - Regions and Availability Zones are designed to provide low-latency and fault-tolerant access to services for users within a given area.
+  - **Regions and Availability Zones are designed to provide low-latency and fault-tolerant access to services for users within a given area**.
 
 - **NOTE** : It's recommended to distribute your resources across multiple AZs. That way, if one AZ encounters an outage, your business applications will continue to operate without interruption. With this approach of redundancy and resource isolation, AWS customers can achieve the benefits of high availability and fault tolerance.
 
@@ -115,24 +115,24 @@ A **server** is a computer that provides services to other computers.
 
 ### Shared Responsibility Model
 
-Used to define **security responsibilities between AWS and the customer**.
+- **Shared Responsibility Model** Used to define **security responsibilities between AWS and the customer**.
 
 1. **AWS Responsibilities (Security OF the Cloud)**
    - AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud.
-   - Infrastructure
-   - Global network security
-   - Hardware
-   - Compliance validation
+      - Infrastructure
+      - Global network security
+      - Hardware
+      - Compliance validation
 
 2. **Customer Responsibilities (Security IN the Cloud)**
    - Customers are responsible for managing security requirements for their data, including which data they store on AWS and who has access to that data.
-   - Users
-   - Groups
-   - Roles
-   - Policies
-   - Monitoring
-   - MFA configuration
-   - Key rotation
+      - Users
+      - Groups
+      - Roles
+      - Policies
+      - Monitoring
+      - MFA configuration
+      - Key rotation
 
 3. **Customer or AWS responsibility (Varies by service)**
    - Depending on the service used, responsibilities might shift between the customer and AWS.

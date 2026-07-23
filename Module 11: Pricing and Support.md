@@ -72,7 +72,7 @@ for as long as you use them, without long-term commitments or complex licensing.
       - Useful for avoiding unexpected cost increases.
 
   4.  **AWS Cost Explorer**
-      - Provides charts and reports to analyze historical spending.
+      - Provides/forcase charts and reports to analyze historical spending.
       - Helps identify trends and cost-saving opportunities.
 
   5.  **AWS Pricing Calculator**

@@ -294,6 +294,7 @@ AWS offers these generative AI options:
 
   2.  **Amazon Redshift**
       - Fully managed data warehouse for petabytes of structured or semi-structured data.
+      - encryption is optional setting provided.
 
 ### Data cataloging
 

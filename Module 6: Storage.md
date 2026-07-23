@@ -107,7 +107,7 @@
 
 ---
 
-### Amazon Elastic Block Store (EBS)
+## Amazon Elastic Block Store (EBS)
 
 - Amazon EBS provides persistent block-level storage volumes for use with Amazon EC2 instances. EBS volumes act like external hard drives and provide consistent, low-latency performance for workloads such as databases and file systems.
 - EBS volumes have a lifecycle that is independent from EC2 instances. They can be detached from one instance and attached to another, and the data remains intact even if the instance is shut down or terminated.
@@ -115,7 +115,7 @@
 - To create an EBS volume, you define its size and type. After the volume is created, it can be attached to an Amazon EC2 instance. Because EBS volumes are intended for data that must persist, it is important to back up the data.
 - Amazon EBS ensures data protection through automatic replication within the same Availability Zone.
 - **It is recommended to take incremental backups by creating Amazon EBS snapshots**.
-
+- By default it is not encrypted.
 - **Key takeaway**: **data persistence** - Amazon EBS provides block-level storage volumes that you can use with Amazon EC2 instances. If you stop or terminate an Amazon EC2 instance, the data on the attached EBS volume remains available.
 
 - **Use cases Of EBS** : Some common use cases for Amazon EBS include database hosting, backup storage for applications, and rapid deployment of development environments using volume snapshots.
@@ -228,6 +228,8 @@
 - Buckets are created in a specific **AWS Region** and have **globally unique names**.
 
 - **Key takeaway**: Amazon S3 is ideal for storing large amounts of unstructured data such as images, videos, backups, logs, and static website content.
+
+- **Data encryption is automatically enabled**. 
 
 #### Core concepts
 
@@ -441,7 +443,7 @@
 - It automatically scales to petabytes without disrupting applications.
 - It is designed for workloads that need shared access from multiple compute resources such as EC2 instances, containers, or serverless applications.
 - Amazon EFS is **not supported on Windows-based EC2 instances**.
-
+- be default it doesn't have encryption on, you need to connfigure it wit Amazon EFS driver.
 - **Key takeaway**: use Amazon EFS when multiple resources need shared, elastic file storage.
 
 #### Amazon EFS benefits
@@ -624,6 +626,8 @@
 - You can deploy it as a virtual appliance in VMware, Hyper-V, or Linux KVM, or as an EC2 instance in AWS.
 
 - **Key takeaway**: AWS Storage Gateway helps extend on-premises storage into AWS without forcing you to rewrite existing applications or workflows.
+
+- **Data encryption is automatically enabled**
 
 ### Benefits of AWS Storage Gateway
 

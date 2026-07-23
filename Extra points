@@ -1,0 +1,10 @@
+1. AWS elastic Beabstalk
+2. AWS cost and usage report (AWS CUR)
+3. AWS cloudSHM
+4. VPC endpoint, VPC peering connection
+5. AWS system manager session manager : AWS system manager session manager is a fully manage service that provide you with an interactive browser best sale and CLI command experience. It helps to provide secure an audit instance management without the need to open in board board. Maintain ation host and manage SSHAWA system manager session manager helps to enable compliance with cooperative policies that require control access to increase security and auditability of access to the instance, while providing simply city and cross platform, distance access to end user.
+7. Multi-AZ deploymnent
+8. Network Load Balancer
+9. Application load balncer
+10. AWS codeCommit
+11. AWS codeDeploy

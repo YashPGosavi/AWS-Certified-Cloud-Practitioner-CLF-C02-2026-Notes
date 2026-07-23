@@ -2,12 +2,12 @@
 
 ## EC2 (Elastic Compute Cloud)
 
-EC2 provides **virtual machines in AWS**.
-
+- EC2 provides **virtual machines in AWS**.
 - Compute refers to the processing power needed to run applications, manage data, and perform calculations.
 - In the cloud, this power is available on-demand. You can access it remotely without owning or maintaining physical hardware.
-- Amazon EC2 is more flexible, cost-effective, and faster than managing on-premises servers. It offers on-demand compute capacity that can be quickly launched, scaled, and terminated, with costs based only on active usage.
+- **Amazon EC2 is more flexible, cost-effective, and faster than managing on-premises servers**. It offers on-demand compute capacity that can be quickly launched, scaled, and terminated, with costs based only on active usage.
 - The flexibility of Amazon EC2 allows for faster development and deployment of applications. You can launch as many or as few virtual servers as needed and configure security, networking, and storage. You can also scale resources up or down based on usage, such as handling high traffic or compute-heavy tasks.
+- **AWS CodeDeploy use to automate the code deployment to Amazon EC2 instance and as well as on premise instance**.
 
 ---
 
@@ -24,10 +24,9 @@ EC2 provides **virtual machines in AWS**.
 
 ### EC2 Instance
 
-- Pay for what you use
-- EC2 instance are virtual machine or VM's are in Multitendancy enviorment, that is, Each virtual machine is isolated but shares resources from a host machine.
+- **EC2 instance are virtual machine or VM's are in Multitendancy enviorment**, that is, Each virtual machine is isolated but shares resources from a host machine.
   - (Multitenancy: Sharing underlying hardware between virtual machines.)
-- EC2 instance are resizalble (vertical scaling)
+- EC2 instance are resizalble (vertical scaling).
 
 ### EC2 Uses
 
@@ -37,20 +36,19 @@ EC2 provides **virtual machines in AWS**.
 
 ### EC2 Related Services
 
-- **EBS** – Persistent storage
-- **ELB** – Load balancing
+- **EBS (Elastic BLock Storage)** – Persistent storage
+- **ELB (Elastic Load Balancer)** – Load balancing
 - **Auto Scaling Group (ASG)** – Automatic scaling of instances
 
 ### EC2 Configuration
 
-When launching an EC2 instance you configure:
-
-- Operating system (Linux, Windows, macOS)
-- CPU
-- RAM
-- Storage
-- Network
-- Security groups
+- When launching an EC2 instance you configure:
+   - Operating system (Linux, Windows, macOS)
+   - CPU
+   - RAM
+   - Storage
+   - Network
+   - Security groups
 
 #### Compute as a Service : AWS makes easy to accure server by this.
 

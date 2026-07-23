@@ -14,7 +14,7 @@ AWS follows the **Least Privilege Principle**:
 
 ### IAM Policy Document Structure
 
-    - Example IAM policy structure:
+- Example IAM policy structure:
 
 ```json
 {
@@ -65,7 +65,7 @@ Strong password policies improve security.
 
 - **MFA Device Options**:
   - Virtual MFA (Google Authenticator)
-  - U2F Security Key (Yubikey)
+  - U2F Security Key (Yubikey) - hardware device
   - Hardware Key Fob
 
 ### AWS GovCloud (US)
@@ -77,34 +77,38 @@ A special AWS region designed for **US government workloads requiring strict com
 1. AWS Management Console (Web UI, MFA supported)
 2. AWS CLI (Command Line Interface)
 3. AWS SDK (Programming language integration)
-
-Authentication for CLI and SDK uses **Access Keys**.
+- Authentication for CLI and SDK uses **Access Keys**.
 
 ### AWS CLI / AWS CloudShell
 
 Used to **manage AWS services from the command line**.
 
+
+---
+
+
 ## IAM Roles
 
 IAM Roles allow **AWS services to access other AWS services securely**.
 
-Example:
-
+**Example**:
 - EC2 accessing S3
+
 
 ### IAM Security Tools
 
-1. IAM Credentials Report
+1. **IAM Credentials Report**
    - Account-level report listing:
      - Users
      - Password status
      - Access keys
      - MFA usage
 
-2. IAM Access Advisor / Last Accessed
+2. **IAM Access Advisor / Last Accessed**
    - Shows:
      - When a user last accessed a service
      - Which services were used
+
 
 ### IAM Best Practices
 
@@ -116,6 +120,7 @@ Example:
 6. Use IAM roles for AWS services
 7. Audit permissions using credential reports
 8. Never share access keys
+
 
 ### IAM Summary
 
